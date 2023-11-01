@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "styles.css";
+
+@tailwind base;
+/*base is for every html element*/
+@tailwind components;
+/*components is for making custom class css components*/
+@tailwind utilities;

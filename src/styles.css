@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button.simple {
+  display: flex;
+  width: 104px;
+  height: 37px;
+  padding: 6px 26px 7px 26px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #ffead0;
+  border-radius: 5px;
+  background: #e17654;
+}
+
+button.luxury {
+  display: inline-flex;
+  height: 37px;
+  padding: 6px 25px 7px 25px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #ffead0;
+  border-radius: 5px;
+  background: #161616;
+}
+
+button.rugged {
+  display: flex;
+  width: 104px;
+  height: 37px;
+  padding: 6px 22px 7px 23px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #ffead0;
+  border-radius: 5px;
+  background: #115e59;
+}
