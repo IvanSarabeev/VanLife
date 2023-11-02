@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../html/Button";
+import Button from "../../../components/HTML/Button";
 
 const btnTitle = [
   { id: 1, title: "Simple" },

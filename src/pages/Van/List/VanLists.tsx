@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../html/Button";
-import { VanData } from "../../types/types";
+import Button from "../../../components/HTML/Button";
+import { VanData } from "../../../types/types";
 import { Link } from "react-router-dom";
 
 type VanListProps = {

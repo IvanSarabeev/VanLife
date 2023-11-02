@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../components/Layout";
-import { VanData } from "../types/types";
-import { fetchVansData } from "../services/apiService";
-import VanLists from "../components/Card/VanLists";
-import Navigation from "../components/Card/Navigation";
+import Layout from "../../components/Layout";
+import { VanData } from "../../types/types";
+import { fetchVansData } from "../../services/apiService";
+import VanLists from "./List/VanLists";
+import Navigation from "./Navigation/Navigation";
 
 const Vans = () => {
   const [van, setVan] = useState<VanData[]>([]);

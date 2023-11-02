@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import AboutBg from "../assets/images/bg-about.png";
-import Button from "../components/html/Button";
+import Button from "../components/HTML/Button";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
         <img
           src={AboutBg}
           alt="about-wallpaper"
-          className="w-full h-60 bg-center bg-cover object-cover aspect-auto"
+          className="w-full h-60 md:h-80 lg:h-96 bg-center bg-cover object-cover lg:object-fill aspect-auto"
         />
         <main className="w-full h-screen flex flex-col lg:flex-row items-center justify-center font-inter text-[#161616] bg-[#FFF7ED]">
           <section className="w-auto h-auto lg:max-w-3xl flex flex-col px-12 py-20 space-y-6">
