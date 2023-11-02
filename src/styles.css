@@ -21,6 +21,7 @@ button.simple {
 
 button.luxury {
   display: inline-flex;
+  width: 104px;
   height: 37px;
   padding: 6px 25px 7px 25px;
   justify-content: center;
