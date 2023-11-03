@@ -1,7 +1,7 @@
 import React from "react";
 
 const Income = () => {
-  return <main>Income</main>;
+  return <>Income</>;
 };
 
 export default Income;

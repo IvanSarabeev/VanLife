@@ -27,7 +27,7 @@ const ProductDetail = ({ vanInfo }: SingleVanProps) => {
         </div>
         <article className="flex flex-col flex-1 flex-shrink-0 space-y-6">
           <span className="inline-flex items-center justify-between">
-            <h3 className="text-4xl font-bold text-[#161616] leading-8">
+            <h3 className="text-4xl font-bold text-custom-black leading-8">
               {vanInfo.name}
             </h3>
             <Button className={`${vanInfo.type} capitalize`}>
@@ -37,7 +37,7 @@ const ProductDetail = ({ vanInfo }: SingleVanProps) => {
           <p className="max-w-md text-base font-medium leading-6 text-left indent-2">
             {vanInfo.description}
           </p>
-          <Button className="text-lg font-bold text-white leading-8 text-center py-[10px] px-36 rounded bg-[#FF8C38] hover:scale-105 transition">
+          <Button className="text-lg font-bold text-white leading-8 text-center py-[10px] px-36 rounded bg-dark-coral hover:scale-105 transition">
             Rent this van
           </Button>
         </article>

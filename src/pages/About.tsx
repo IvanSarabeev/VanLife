@@ -13,7 +13,7 @@ const About = () => {
           alt="about-wallpaper"
           className="w-full h-60 md:h-80 lg:h-96 bg-center bg-cover object-cover lg:object-fill aspect-auto"
         />
-        <main className="w-full h-screen flex flex-col lg:flex-row items-center justify-center font-inter text-[#161616] bg-[#FFF7ED]">
+        <main className="w-full h-screen flex flex-col lg:flex-row items-center justify-center font-inter text-custom-black bg-coral">
           <section className="w-auto h-auto lg:max-w-3xl flex flex-col px-12 py-20 space-y-6">
             <h2 className="text-3xl font-bold leading-9 indent-2">
               Don’t squeeze in a sedan when you could relax in a van.
@@ -31,12 +31,12 @@ const About = () => {
               </p>
             </div>
           </section>
-          <aside className="w-auto h-52 rounded-md bg-[#FFCC8D] flex-shrink-0 font-inter mx-auto">
+          <aside className="w-auto h-52 rounded-md bg-light-coral flex-shrink-0 font-inter mx-auto">
             <h3 className="text-2xl font-bold leading-8 py-8 px-9">
               Your destination is waiting. <br />
               Your van is ready.
             </h3>
-            <Button className="text-white py-3 px-6 ml-9 rounded-xl bg-[#161616] hover:border-gray-950 hover:border-2 hover:text-[#161616] hover:bg-white hover:scale-105 transition-all ease-in-out">
+            <Button className="text-white py-3 px-6 ml-9 rounded-xl bg-[#161616] hover:border-gray-950 hover:border-2 hover:text-custom-black hover:bg-white hover:scale-105 transition-all ease-in-out">
               <Link to="/vans">Explore our vans</Link>
             </Button>
           </aside>

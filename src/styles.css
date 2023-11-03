@@ -44,3 +44,24 @@ button.rugged {
   border-radius: 5px;
   background: #115e59;
 }
+
+.active-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #161616;
+  text-decoration: underline;
+}
+
+.active-link:hover {
+  color: #e17654;
+}
+
+.nav-links {
+  color: #161616;
+  text-decoration: none;
+}
+
+.nav-links:hover {
+  color: #e17654;
+  text-decoration: underline;
+}

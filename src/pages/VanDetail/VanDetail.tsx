@@ -34,7 +34,7 @@ const VanDetail = () => {
   return (
     <>
       <Layout>
-        <main className="min-h-screen w-full pb-20 lg:mb-0 font-inter bg-[#FFF7ED]">
+        <main className="min-h-screen w-full pb-20 lg:mb-0 font-inter bg-coral">
           <Button type="button" className="pb-6 ml-12 mr-auto">
             <Link
               to="/vans"
@@ -48,7 +48,7 @@ const VanDetail = () => {
               <ProductDetail vanInfo={vanInfo} />
             ) : (
               <>
-                <h4 className="text-4xl text-[#161616] font-bold font-inter">
+                <h4 className="text-4xl text-custom-black font-bold font-inter">
                   <IconSpinner className="fill-blue-600 animate-ping" />
                   Loading data ..
                 </h4>

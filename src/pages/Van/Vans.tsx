@@ -24,8 +24,8 @@ const Vans = () => {
   return (
     <>
       <Layout>
-        <main className="bg-[#FFF7ED] px-6 pb-10">
-          <h2 className="text-3xl font-bold leading-8 text-[#161616] pt-14">
+        <main className="px-6 pb-10 bg-coral">
+          <h2 className="text-3xl font-bold leading-8 text-custom-black pt-14">
             Explore our van options
           </h2>
           <Navigation />

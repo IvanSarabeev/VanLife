@@ -16,7 +16,7 @@ const Home = () => {
               Add adventure to your life by joining the #vanlife movement. Rent
               the perfect van to make your perfect road trip.
             </p>
-            <Button className="w-auto h-auto font-bold text-base leading-8 text-center bg-[#FF8C38] py-2.5 lg:py-5 px-16 lg:px-32 rounded hover:scale-105 transition-all">
+            <Button className="w-auto h-auto font-bold text-base leading-8 text-center bg-dark-coral py-2.5 lg:py-5 px-16 lg:px-32 rounded hover:scale-105 transition-all">
               <Link to="/vans">Find your van</Link>
             </Button>
           </section>

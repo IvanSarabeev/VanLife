@@ -16,7 +16,7 @@ const HostLayout = () => {
   return (
     <>
       <Header />
-      <aside className="px-5 pt-8 pb-11 bg-[#FFF7ED]">
+      <aside className="px-5 pt-8 pb-11 bg-coral">
         <nav className="font-inter text-lg text-[#4D4D4D] leading-6 font-medium">
           {hostNavigation.map((item, index) => {
             return (
@@ -35,7 +35,9 @@ const HostLayout = () => {
           })}
         </nav>
       </aside>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );
