@@ -19,7 +19,7 @@ export const fetchVansData = async () => {
 
 export const fetchVanIdData = async (id: string) => {
   try {
-    const response = await fetch(`${URL}/${id}`); // :
+    const response = await fetch(`${URL}/${id}`);
 
     if (!response.ok) {
       throw new Error(

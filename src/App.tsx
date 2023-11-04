@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Van/Vans";
 import VanDetail from "./pages/VanDetail/VanDetail";
-import HostLayout from "./pages/Host/HostLayout";
+import HostLayout from "./components/HostLayout";
 import Dashboard from "./pages/Host/Dashboard/Dashboard";
 import Income from "./pages/Host/Inc/Income";
+import HostVans from "./pages/Host/Vans/HostVans";
+import HostDetails from "./pages/HostDetail/HostDetails";
 import Reviews from "./pages/Host/Reviews/Reviews";
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="income" element={<Income />} />
           <Route path="reviews" element={<Reviews />} />
+          <Route path="vans" element={<HostVans />} />
+          <Route path="vans/:id" element={<HostDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

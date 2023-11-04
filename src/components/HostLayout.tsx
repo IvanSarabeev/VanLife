@@ -1,18 +1,16 @@
 import React from "react";
-import { Outlet, Link, useLocation } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import { Outlet, NavLink } from "react-router-dom";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const hostNavigation = [
-  { title: "Dashboard", to: "" },
+  { title: "Dashboard", to: "host" },
   { title: "Income", to: "income" },
-  { title: "Vans", to: "/vans" },
+  { title: "Vans", to: "vans" },
   { title: "Reviews", to: "reviews" },
 ];
 
 const HostLayout = () => {
-  const localPath = useLocation();
-
   return (
     <>
       <Header />
@@ -20,22 +18,23 @@ const HostLayout = () => {
         <nav className="font-inter text-lg text-[#4D4D4D] leading-6 font-medium">
           {hostNavigation.map((item, index) => {
             return (
-              <Link
+              <NavLink
+                end
                 key={index}
                 to={item.to}
-                className={`${
-                  localPath.pathname === item.to
-                    ? "underline text-[#161616] font-bold hover:text-[#e2b479]"
-                    : ""
-                } pr-7 hover:text-[#161616] hover:underline hover:font-bold transition-all`}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-custom-black font-bold hover:text-[#e2b479] text-lg underline pr-7"
+                    : " pr-7 text-lg hover:underline hover:font-bold transition-all"
+                }
               >
                 {item.title}
-              </Link>
+              </NavLink>
             );
           })}
         </nav>
       </aside>
-      <main>
+      <main className="min-h-screen w-full px-5 font-inter bg-coral">
         <Outlet />
       </main>
       <Footer />
