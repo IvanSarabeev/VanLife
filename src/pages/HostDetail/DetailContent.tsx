@@ -1,6 +1,6 @@
 import React from "react";
-import { VanDataExtended } from "../../../types/types";
-import Button from "../../../components/HTML/Button";
+import { VanDataExtended } from "../../types/types";
+import Button from "../../components/HTML/Button";
 
 type DContentProps = {
   item: VanDataExtended;
@@ -27,11 +27,6 @@ const DetailContent = ({ item }: DContentProps) => {
           </span>
         </div>
       </div>
-      {/* Navigation */}
-      <p className="text-sm text-custom-black font-medium leading-5">
-        <strong className="font-bold">Description:</strong>
-        {item.description}
-      </p>
     </>
   );
 };

@@ -6,3 +6,13 @@
 @tailwind components;
 /*components is for making custom class css components*/
 @tailwind utilities;
+
+@layer components {
+  .active-nav {
+    @apply pr-7 text-custom-black font-bold hover:text-[#e2b479] text-lg underline;
+  }
+
+  .passive-nav {
+    @apply pr-7 text-lg hover:underline hover:font-bold transition-all;
+  }
+}

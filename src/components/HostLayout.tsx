@@ -3,11 +3,10 @@ import { Outlet, NavLink } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
-const hostNavigation = [
-  { title: "Dashboard", to: "host" },
-  { title: "Income", to: "income" },
-  { title: "Vans", to: "vans" },
-  { title: "Reviews", to: "reviews" },
+const navLinks = [
+  { to: "income", title: "Income" },
+  { to: "vans", title: "Vans" },
+  { to: "reviews", title: "Reviews" },
 ];
 
 const HostLayout = () => {
@@ -16,19 +15,25 @@ const HostLayout = () => {
       <Header />
       <aside className="px-5 pt-8 pb-11 bg-coral">
         <nav className="font-inter text-lg text-[#4D4D4D] leading-6 font-medium">
-          {hostNavigation.map((item, index) => {
+          <NavLink
+            to="."
+            end
+            className={({ isActive }) =>
+              isActive ? "active-nav" : "passive-nav"
+            }
+          >
+            Dashboard
+          </NavLink>
+          {navLinks.map((link, index) => {
             return (
               <NavLink
-                end
                 key={index}
-                to={item.to}
+                to={link.to}
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-custom-black font-bold hover:text-[#e2b479] text-lg underline pr-7"
-                    : " pr-7 text-lg hover:underline hover:font-bold transition-all"
+                  isActive ? "active-nav" : "passive-nav"
                 }
               >
-                {item.title}
+                {link.title}
               </NavLink>
             );
           })}

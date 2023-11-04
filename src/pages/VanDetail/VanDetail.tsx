@@ -6,6 +6,7 @@ import Layout from "../../components/Layout";
 import Button from "../../components/HTML/Button";
 import ProductDetail from "./Detail/ProductDetail";
 import { ReactComponent as IconSpinner } from "../../assets/svgs/spinner.svg";
+import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 
 const VanDetail = () => {
   const { id } = useParams();
@@ -34,7 +35,11 @@ const VanDetail = () => {
     <>
       <Layout>
         <main className="min-h-screen w-full pb-20 lg:mb-0 font-inter bg-coral">
-          <Button type="button" className="pb-6 ml-12 mr-auto">
+          <Button
+            type="button"
+            className="flex items-center space-x-1 pb-6 ml-12 mr-auto"
+          >
+            <IconLeft className="w-4 h-auto" />
             <Link
               to="/vans"
               className="text-[#201F1D] text-base font-medium leading-6 underline"
