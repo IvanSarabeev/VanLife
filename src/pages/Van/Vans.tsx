@@ -4,9 +4,14 @@ import { VanData } from "../../types/types";
 import { fetchVansData } from "../../services/apiService";
 import VanLists from "./List/VanLists";
 import Navigation from "./Navigation/Navigation";
+import { useSearchParams } from "react-router-dom";
 
 const Vans = () => {
   const [van, setVan] = useState<VanData[]>([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const typeFilter = searchParams.get("type");
+  console.log(typeFilter);
 
   const handleFetch = async () => {
     try {

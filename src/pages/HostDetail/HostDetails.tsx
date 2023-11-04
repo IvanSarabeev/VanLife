@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { VanDataExtended } from "../../types/types";
-import { useParams, NavLink, Outlet } from "react-router-dom";
+import { useParams, NavLink, Outlet, useOutletContext } from "react-router-dom";
 import { fetchVanIdData } from "../../services/apiService";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 import Button from "../../components/HTML/Button";
 import DetailContent from "./DetailContent";
 
 const navLinks = [
-  { to: ".", title: "Details" },
   { to: "price", title: "Price" },
   { to: "photos", title: "Photos" },
 ];
+
+type ContextType = { vanDetail: VanDataExtended | null };
 
 const HostDetails = () => {
   const { id } = useParams();
@@ -20,10 +21,8 @@ const HostDetails = () => {
   useEffect(() => {
     const handleFetchId = async () => {
       if (id) {
-        console.log(id);
         try {
           const data = await fetchVanIdData(id);
-          console.log(data);
           if (data) {
             setVanDetail(data.van);
           }
@@ -35,6 +34,7 @@ const HostDetails = () => {
 
     handleFetchId();
   }, [id]);
+
   return (
     <>
       <Button type="button" className="flex space-x-1 items-center pb-6">
@@ -53,25 +53,38 @@ const HostDetails = () => {
         ) : (
           <p>Loading Data</p>
         )}
-        <nav className="flex items-center justify-start space-x-2">
+        <nav className="flex items-center justify-start space-x-2 py-6">
+          <NavLink
+            end
+            to="."
+            className={({ isActive }) =>
+              isActive ? "active-nav" : "passive-nav"
+            }
+          >
+            Dashboard
+          </NavLink>
           {navLinks.map((link, index) => {
             return (
               <NavLink
+                key={index}
+                to={link.to}
                 className={({ isActive }) =>
                   isActive ? "active-nav" : "passive-nav"
                 }
-                key={index}
-                to={link.to}
               >
                 {link.title}
               </NavLink>
             );
           })}
         </nav>
-        <Outlet />
+        <Outlet context={{ vanDetail }} />
       </section>
     </>
   );
 };
 
 export default HostDetails;
+
+export function useVanContext() {
+  return useOutletContext<ContextType>();
+}

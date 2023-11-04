@@ -39,7 +39,7 @@ const HostLayout = () => {
           })}
         </nav>
       </aside>
-      <main className="min-h-screen w-full px-5 font-inter bg-coral">
+      <main className="h-fit w-full px-5 pt-5 pb-10 font-inter bg-coral">
         <Outlet />
       </main>
       <Footer />
