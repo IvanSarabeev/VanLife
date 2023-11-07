@@ -45,6 +45,18 @@ button.rugged {
   background: #115e59;
 }
 
+button.selected-simple {
+  background: #e17654;
+}
+
+button.selected-luxury {
+  background: #161616;
+}
+
+button.selected-rugged {
+  background: #115e59;
+}
+
 .active-link {
   font-size: 16px;
   font-weight: 600;

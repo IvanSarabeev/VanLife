@@ -1,8 +1,15 @@
-import { createServer, Model } from "miragejs";
+import { createServer, Model, Response } from "miragejs";
+import { User } from "../types/types";
 
 createServer({
   models: {
     van: Model,
+    user: Model.extend<User>({
+      id: "123",
+      email: "test@example.com",
+      password: "password123",
+      name: "John Doe",
+    }),
   },
 
   seeds(server) {
@@ -71,19 +78,44 @@ createServer({
         "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
       type: "rugged",
     });
+
+    server.create("user", {
+      id: "123",
+      email: "test@example.com",
+      password: "123",
+      name: "Ivan",
+    });
   },
 
   routes() {
     this.namespace = "api";
     this.logging = false;
+    this.timing = 1000;
 
     this.get("/vans", (schema) => {
-      return schema.all("van"); // Access the "van" model, not "vans"
+      return schema.all("van");
     });
 
     this.get("/vans/:id", (schema, request) => {
       const id = request.params.id;
-      return schema.find("van", id); // Access the "van" model, not "vans"
+      return schema.find("van", id);
+    });
+
+    this.post("/login", (schema, request) => {
+      const foundUser = schema.find("user", "123");
+
+      if (!foundUser) {
+        return new Response(401, {
+          message: "No user with those credentials found!",
+        });
+      }
+
+      foundUser.update({ password: undefined });
+      return {
+        user: foundUser,
+        token: "Enjoy your day, here's your tokens.",
+      };
     });
   },
+  //
 });

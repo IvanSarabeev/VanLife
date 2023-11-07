@@ -21,7 +21,7 @@ const ProductDetail = ({ vanInfo }: SingleVanProps) => {
             type="button"
             className={`absolute right-2.5 top-5 z-20 inline-flex ${vanInfo.type}`}
           >
-            {vanInfo.price}
+            ${vanInfo.price}
             <pre>/day</pre>
           </Button>
         </div>

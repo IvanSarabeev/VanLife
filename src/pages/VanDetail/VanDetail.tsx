@@ -10,6 +10,7 @@ import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 
 const VanDetail = () => {
   const { id } = useParams();
+
   const [vanInfo, setVanInfo] = useState<VanDataExtended | null>(null);
 
   useEffect(() => {
@@ -41,7 +42,8 @@ const VanDetail = () => {
           >
             <IconLeft className="w-4 h-auto" />
             <Link
-              to="/vans"
+              to=".."
+              relative="path"
               className="text-[#201F1D] text-base font-medium leading-6 underline"
             >
               Back to all vans

@@ -8,7 +8,7 @@ type HostVanProps = {
 
 const HostList = ({ item }: HostVanProps) => {
   return (
-    <NavLink end to={`/host/vans/${item.id}`}>
+    <NavLink end to={item.id}>
       <div className="w-[412px] lg:w-[524px] h-28 flex items-center justify-start rounded-md py-4 px-6 mb-4 space-x-4 shadow-md bg-white">
         <img
           src={item.imageUrl}

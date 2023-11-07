@@ -27,9 +27,13 @@ const HostVans = () => {
         Your listed vans
       </h3>
       <section className="flex flex-col items-center justify-center py-6 font-inter">
-        {van.map((item, index) => {
-          return <HostList key={index} item={item} />;
-        })}
+        {van.length > 0 ? (
+          van.map((item, index) => {
+            return <HostList key={index} item={item} />;
+          })
+        ) : (
+          <p>Loading data</p>
+        )}
       </section>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { ReactComponent as IconLogin } from "../../assets/svgs/user-circle.svg";
 
 const navLinks = [
   { title: "About", to: "/about" },
@@ -28,6 +29,11 @@ const Header = () => {
             </li>
           );
         })}
+        <li>
+          <NavLink to="/login">
+            <IconLogin className="w-6 h-6 hover:text-[#e17654]" />
+          </NavLink>
+        </li>
       </ul>
     </header>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
 import { VanData } from "../../types/types";
 import { fetchVansData } from "../../services/apiService";
-import VanLists from "./List/VanLists";
+import VanLists from "./VanLists";
 import Navigation from "./Navigation/Navigation";
 import { useSearchParams } from "react-router-dom";
 
@@ -11,7 +11,10 @@ const Vans = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const typeFilter = searchParams.get("type");
-  console.log(typeFilter);
+
+  const displayedVans = typeFilter
+    ? van.filter((char) => char.type === typeFilter)
+    : van;
 
   const handleFetch = async () => {
     try {
@@ -33,11 +36,15 @@ const Vans = () => {
           <h2 className="text-3xl font-bold leading-8 text-custom-black pt-14">
             Explore our van options
           </h2>
-          <Navigation />
+          <Navigation typeFilter={typeFilter} />
           <section className="flex flex-wrap lg:flex-row items-center justify-around space-y-4">
-            {van.map((item) => {
-              return <VanLists key={item.id} item={item} />;
-            })}
+            {van.length > 0 ? (
+              displayedVans.map((item) => {
+                return <VanLists key={item.id} item={item} />;
+              })
+            ) : (
+              <p>Loading data</p>
+            )}
           </section>
         </main>
       </Layout>
