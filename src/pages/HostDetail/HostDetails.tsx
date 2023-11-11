@@ -5,11 +5,7 @@ import { fetchVanIdData } from "../../services/apiService";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 import Button from "../../components/HTML/Button";
 import DetailContent from "./DetailContent";
-
-const navLinks = [
-  { to: "price", title: "Price" },
-  { to: "photos", title: "Photos" },
-];
+import OutletNav from "./OutletNav/OutletNav";
 
 type ContextType = { vanDetail: VanDataExtended | null };
 
@@ -42,40 +38,20 @@ const HostDetails = () => {
         <NavLink
           to=".."
           relative="path"
-          className="text-[#201F1D] text-base font-medium leading-6 underline"
+          type="button"
+          className="text-[#201F1D] text-sm md:text-base font-medium hover:underline underline-offset-4"
         >
           Back to all vans
         </NavLink>
       </Button>
-      <section className="h-auto w-auto md:w-[512px] py-6 px-7 font-inter rounded-md bg-white">
+      <section className="h-auto w-auto md:max-w-lg lg:max-w-2xl py-6 px-7 mb-6 font-inter rounded-xl mx-auto shadow-xl bg-white">
         {vanDetail !== null ? (
           <DetailContent item={vanDetail} />
         ) : (
           <p>Loading Data</p>
         )}
-        <nav className="flex items-center justify-start space-x-2 py-6">
-          <NavLink
-            end
-            to="."
-            className={({ isActive }) =>
-              isActive ? "active-nav" : "passive-nav"
-            }
-          >
-            Dashboard
-          </NavLink>
-          {navLinks.map((link, index) => {
-            return (
-              <NavLink
-                key={index}
-                to={link.to}
-                className={({ isActive }) =>
-                  isActive ? "active-nav" : "passive-nav"
-                }
-              >
-                {link.title}
-              </NavLink>
-            );
-          })}
+        <nav className="flex items-center text-base lg:text-lg justify-start space-x-1 lg:space-x-2 py-6">
+          <OutletNav />
         </nav>
         <Outlet context={{ vanDetail }} />
       </section>

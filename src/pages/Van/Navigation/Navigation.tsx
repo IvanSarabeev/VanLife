@@ -14,13 +14,13 @@ type NavProps = {
 
 const Navigation = ({ typeFilter }: NavProps) => {
   return (
-    <nav className="flex flex-wrap items-center justify-start space-x-4 my-6 font-inter text-base text-[#4D4D4D] font-medium leading-6 ">
+    <nav className="flex flex-wrap items-center justify-start gap-4 my-6 font-inter text-base text-[#4D4D4D] font-medium">
       {btnTitle.map((item) => {
         return (
           <Button
             type="button"
             key={item.id}
-            className="inline-flex items-center justify-center flex-shrink-0 py-2 px-6 text-center rounded-md bg-[#FFEAD0]"
+            className={`inline-flex items-center justify-center flex-shrink-0 py-2 lg:py-3 px-6 lg:px-8 text-center rounded-md bg-[#FFEAD0]`}
           >
             {/* I Can also use the useSearchParams hook as an onClick handler
             in order to add the filtering by type, in the button */}

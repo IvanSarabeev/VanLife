@@ -5,11 +5,18 @@ const HostVanPhotos = () => {
   const { vanDetail } = useVanContext();
   return (
     <>
-      <img
-        src={vanDetail?.imageUrl}
-        alt={vanDetail?.name}
-        className="w-28 h-28 aspect-auto object-contain rounded"
-      />
+      <div className="flex gap-x-2 items-center overflow-auto touch-pan-x">
+        {vanDetail?.imgGallery.map((image) => {
+          return (
+            <img
+              key={image.id}
+              src={image.src}
+              alt={image.alt}
+              className="w-24 h-auto md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40 aspect-auto object-contain rounded-md"
+            />
+          );
+        })}
+      </div>
     </>
   );
 };

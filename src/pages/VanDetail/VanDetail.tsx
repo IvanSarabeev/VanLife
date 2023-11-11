@@ -35,10 +35,10 @@ const VanDetail = () => {
   return (
     <>
       <Layout>
-        <main className="min-h-screen w-full pb-20 lg:mb-0 font-inter bg-coral">
+        <main className="w-full h-auto pb-0 px-4 md:px-6 lg:px-8 xl:px-10 lg:pb-20 font-inter bg-coral">
           <Button
             type="button"
-            className="flex items-center space-x-1 pb-6 ml-12 mr-auto"
+            className="flex items-center space-x-1 pb-0 lg:pb-6"
           >
             <IconLeft className="w-4 h-auto" />
             <Link
@@ -49,7 +49,7 @@ const VanDetail = () => {
               Back to all vans
             </Link>
           </Button>
-          <section className="h-auto w-full flex items-center justify-center">
+          <section className="h-screen lg:h-auto w-full flex items-center justify-center">
             {vanInfo !== null ? (
               <ProductDetail vanInfo={vanInfo} />
             ) : (

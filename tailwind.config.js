@@ -9,6 +9,7 @@ module.exports = {
       backgroundImage: {
         "home": "url('../src/assets/images/bg-home.png')",
         "about": "url('../src/assets/images/bg-about.png')",
+        "van": "url('../src/assets/images/about.avif')",
       },
       backgroundColor: {
         "coral": "#FFF7ED",

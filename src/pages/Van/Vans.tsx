@@ -32,12 +32,12 @@ const Vans = () => {
   return (
     <>
       <Layout>
-        <main className="px-6 pb-10 bg-coral">
-          <h2 className="text-3xl font-bold leading-8 text-custom-black pt-14">
+        <main className="px-4 md:px-6 lg:px-8 xl:px-10 pb-10 bg-coral">
+          <h2 className="text-2xl md:text-3xl font-bold leading-8 text-custom-black pt-14">
             Explore our van options
           </h2>
           <Navigation typeFilter={typeFilter} />
-          <section className="flex flex-wrap lg:flex-row items-center justify-around space-y-4">
+          <section className="vans-container">
             {van.length > 0 ? (
               displayedVans.map((item) => {
                 return <VanLists key={item.id} item={item} />;

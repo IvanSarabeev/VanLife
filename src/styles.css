@@ -77,3 +77,25 @@ button.selected-rugged {
   color: #e17654;
   text-decoration: underline;
 }
+
+/* .form-input {
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  focus: outline-none;
+  focus: ring-2;
+  focus: ring-[#FF8C38];
+}
+
+.form-input:focus {
+  outline: none;
+  border: 2px;
+  border-color: #ff8c38;
+} */

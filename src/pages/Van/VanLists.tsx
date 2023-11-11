@@ -9,20 +9,22 @@ type VanListProps = {
 
 const VanLists = ({ item }: VanListProps) => {
   return (
-    <div className="w-auto h-auto">
+    <div className="group w-fit h-auto hover:drop-shadow-lg hover:scale-105 xl:hover:scale-110 delay-100 ease-in-out transition-all">
       <Link to={item.id}>
         <img
           src={item.imageUrl}
           alt={item.name}
-          className="w-56 h-56 aspect-auto object-cover rounded-md"
+          className="w-56 h-56 md:w-64 md:h-64 aspect-auto object-cover rounded-md group-hover:rounded-lg transition-all"
         />
-        <span className="flex justify-between font-inter pt-2 text-xl text-custom-black font-semibold leading-8">
-          <h4 className="">{item.name}</h4>
-          <h5 className="text-right">
-            ${item.price} <pre className="text-sm">/day</pre>
+        <span className="flex justify-between font-inter pt-2 text-custom-black font-semibold">
+          <h4 className="text-xl lg:text-2xl">{item.name}</h4>
+          <h5 className="text-right text-base lg:text-lg">
+            ${item.price} <pre className="text-sm lg:text-base">/day</pre>
           </h5>
         </span>
-        <Button className={`${item.type} capitalize`}>{item.type}</Button>
+        <Button className={`${item.type} text-base lg:text-lg capitalize`}>
+          {item.type}
+        </Button>
       </Link>
     </div>
   );
