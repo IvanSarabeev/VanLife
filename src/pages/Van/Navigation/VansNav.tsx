@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../../components/HTML/Button";
+import Button from "../../../components/html/Button";
 
 const btnTitle = [
   { id: 1, title: "Simple", type: "simple" },
@@ -12,7 +12,7 @@ type NavProps = {
   typeFilter: string | null;
 };
 
-const Navigation = ({ typeFilter }: NavProps) => {
+const VansNav = ({ typeFilter }: NavProps) => {
   return (
     <nav className="flex flex-wrap items-center justify-start gap-4 my-6 font-inter text-base text-[#4D4D4D] font-medium">
       {btnTitle.map((item) => {
@@ -37,4 +37,4 @@ const Navigation = ({ typeFilter }: NavProps) => {
   );
 };
 
-export default Navigation;
+export default VansNav;

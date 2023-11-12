@@ -1,12 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as IconLogin } from "../../assets/svgs/user-circle.svg";
-
-const navLinks = [
-  { title: "About", to: "/about" },
-  { title: "Vans", to: "/vans" },
-  { title: "Host", to: "/host" },
-];
+import { headerLinks } from "../../constants/data";
 
 const Header = () => {
   return (
@@ -15,7 +10,7 @@ const Header = () => {
         <NavLink to="/">#vanlife</NavLink>
       </h2>
       <ul className="flex items-center space-x-4 text-sm sm:text-base lg:text-lg">
-        {navLinks.map((link, index) => {
+        {headerLinks.map((link, index) => {
           return (
             <li key={index}>
               <NavLink

@@ -3,12 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import { fetchVanIdData } from "../../services/apiService";
 import { VanDataExtended } from "../../types/types";
 import Layout from "../../components/Layout";
-import Button from "../../components/HTML/Button";
+import Button from "../../components/html/Button";
 import ProductDetail from "./Detail/ProductDetail";
 import { ReactComponent as IconSpinner } from "../../assets/svgs/spinner.svg";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 
-const VanDetail = () => {
+const VanDetailPage = () => {
   const { id } = useParams();
 
   const [vanInfo, setVanInfo] = useState<VanDataExtended | null>(null);
@@ -67,4 +67,4 @@ const VanDetail = () => {
   );
 };
 
-export default VanDetail;
+export default VanDetailPage;

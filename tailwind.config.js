@@ -8,8 +8,10 @@ module.exports = {
       fontFamily: { "inter": "Inter, sans-serif" },
       backgroundImage: {
         "home": "url('../src/assets/images/bg-home.png')",
+        "hero": "url('../src/assets/images/hero.webp')",
         "about": "url('../src/assets/images/bg-about.png')",
-        "van": "url('../src/assets/images/about.avif')",
+        "van": "url('../src/assets/images/vans.jpg')",
+        "feature": "url('../src/assets/images/feature.webp')",
       },
       backgroundColor: {
         "coral": "#FFF7ED",

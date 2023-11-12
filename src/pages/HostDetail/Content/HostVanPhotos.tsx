@@ -1,5 +1,5 @@
 import React from "react";
-import { useVanContext } from "../HostDetails";
+import { useVanContext } from "../HostDetailsPage";
 
 const HostVanPhotos = () => {
   const { vanDetail } = useVanContext();

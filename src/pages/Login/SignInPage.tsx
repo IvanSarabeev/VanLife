@@ -4,7 +4,7 @@ import { loginUser } from "../../services/apiService";
 import Form from "./Form";
 import { UserData } from "../../types/types";
 
-const Login = () => {
+const SignInPage = () => {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -57,4 +57,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignInPage;

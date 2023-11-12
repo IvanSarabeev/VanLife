@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import Button from "../../components/HTML/Button";
-import Input from "../../components/HTML/Input";
+import Button from "../../components/html/Button";
+import Input from "../../components/html/Input";
 import { Link } from "react-router-dom";
 import { UserData } from "../../types/types";
 

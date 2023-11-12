@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/Layout";
 import AboutBg from "../assets/images/vans.jpg";
-import Button from "../components/HTML/Button";
+import Button from "../components/html/Button";
 import { Link } from "react-router-dom";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <>
       <Layout>
@@ -49,4 +49,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

@@ -1,13 +1,13 @@
 import React from "react";
-import Button from "../../components/HTML/Button";
+import Button from "../../components/html/Button";
 import { VanData } from "../../types/types";
 import { Link } from "react-router-dom";
 
-type VanListProps = {
+type VansListProps = {
   item: VanData;
 };
 
-const VanLists = ({ item }: VanListProps) => {
+const VansLists = ({ item }: VansListProps) => {
   return (
     <div className="group w-fit h-auto hover:drop-shadow-lg hover:scale-105 xl:hover:scale-110 delay-100 ease-in-out transition-all">
       <Link to={item.id}>
@@ -30,4 +30,4 @@ const VanLists = ({ item }: VanListProps) => {
   );
 };
 
-export default VanLists;
+export default VansLists;

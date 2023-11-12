@@ -3,13 +3,13 @@ import { VanDataExtended } from "../../types/types";
 import { useParams, NavLink, Outlet, useOutletContext } from "react-router-dom";
 import { fetchVanIdData } from "../../services/apiService";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
-import Button from "../../components/HTML/Button";
+import Button from "../../components/html/Button";
 import DetailContent from "./DetailContent";
 import OutletNav from "./OutletNav/OutletNav";
 
 type ContextType = { vanDetail: VanDataExtended | null };
 
-const HostDetails = () => {
+const HostDetailsPage = () => {
   const { id } = useParams();
 
   const [vanDetail, setVanDetail] = useState<VanDataExtended | null>(null);
@@ -59,7 +59,7 @@ const HostDetails = () => {
   );
 };
 
-export default HostDetails;
+export default HostDetailsPage;
 
 export function useVanContext() {
   return useOutletContext<ContextType>();

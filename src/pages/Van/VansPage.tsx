@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
 import { VanData } from "../../types/types";
 import { fetchVansData } from "../../services/apiService";
-import VanLists from "./VanLists";
-import Navigation from "./Navigation/Navigation";
+import VansLists from "./VansLists";
+import VansNav from "./Navigation/VansNav";
 import { useSearchParams } from "react-router-dom";
 
-const Vans = () => {
+const VansPage = () => {
   const [van, setVan] = useState<VanData[]>([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -36,11 +36,11 @@ const Vans = () => {
           <h2 className="text-2xl md:text-3xl font-bold leading-8 text-custom-black pt-14">
             Explore our van options
           </h2>
-          <Navigation typeFilter={typeFilter} />
+          <VansNav typeFilter={typeFilter} />
           <section className="vans-container">
             {van.length > 0 ? (
               displayedVans.map((item) => {
-                return <VanLists key={item.id} item={item} />;
+                return <VansLists key={item.id} item={item} />;
               })
             ) : (
               <p>Loading data</p>
@@ -52,4 +52,4 @@ const Vans = () => {
   );
 };
 
-export default Vans;
+export default VansPage;
