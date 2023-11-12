@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { ReactComponent as IconLogin } from "../../assets/svgs/user-circle.svg";
 import { headerLinks } from "../../constants/data";
+import { ReactComponent as IconLogin } from "../../assets/svgs/user-circle.svg";
 
 const Header = () => {
   return (
-    <header className="h-[110px] w-full py-3 px-4 md:px-6 lg:px-8 xl:px-10 flex items-center justify-between font-inter bg-coral">
+    <header className="lg:sticky z-30 top-0 h-[110px] w-full py-3 px-4 md:px-6 lg:px-8 xl:px-10 flex items-center justify-between font-inter bg-coral">
       <h2 className="text-2xl lg:text-[28px] lg:leading-10 font-black text-[#252525] uppercase">
         <NavLink to="/">#vanlife</NavLink>
       </h2>

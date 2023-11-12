@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../services/apiService";
-import Form from "./Form";
+import SignInForm from "./SignInForm";
 import { UserData } from "../../types/types";
 
 const SignInPage = () => {
@@ -46,7 +46,7 @@ const SignInPage = () => {
 
   return (
     <>
-      <Form
+      <SignInForm
         error={error}
         status={status}
         userData={userData}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../../components/html/Button";
+import Button from "../../components/html/Button";
 
 const btnTitle = [
   { id: 1, title: "Simple", type: "simple" },

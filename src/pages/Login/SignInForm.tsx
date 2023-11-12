@@ -13,7 +13,7 @@ type FormProps = {
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Form = ({
+const SignInForm = ({
   error,
   status,
   userData,
@@ -68,7 +68,7 @@ const Form = ({
             <h4 className="text-custom-black">Don't have an account ?</h4>
             <Link
               to="/login"
-              className="text-[#FF8C38] hover:font-bold hover:underline underline-offset-4 transition-all"
+              className="text-dark-coral hover:font-bold hover:underline underline-offset-4 transition-all"
             >
               Create one now
             </Link>
@@ -79,4 +79,4 @@ const Form = ({
   );
 };
 
-export default Form;
+export default SignInForm;

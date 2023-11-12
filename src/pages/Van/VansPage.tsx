@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import { VanData } from "../../types/types";
 import { fetchVansData } from "../../services/apiService";
 import VansLists from "./VansLists";
-import VansNav from "./Navigation/VansNav";
+import VansNav from "./VansNav";
 import { useSearchParams } from "react-router-dom";
 
 const VansPage = () => {

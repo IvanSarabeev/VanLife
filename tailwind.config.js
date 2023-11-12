@@ -10,7 +10,9 @@ module.exports = {
         "home": "url('../src/assets/images/bg-home.png')",
         "hero": "url('../src/assets/images/hero.webp')",
         "about": "url('../src/assets/images/bg-about.png')",
+        "politic": "url('../src/assets/images/about.jpg')",
         "van": "url('../src/assets/images/vans.jpg')",
+        "capture": "url('../src/assets/images/capture.jpg')",
         "feature": "url('../src/assets/images/feature.webp')",
       },
       backgroundColor: {
@@ -21,6 +23,8 @@ module.exports = {
       },
       textColor: {
         "custom-black": "#161616",
+        "light-coral": "#FFCC8D",
+        "dark-coral": "#FF8C38",
         "footer-gray": "#AAAAAA",
       }
 

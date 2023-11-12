@@ -41,17 +41,18 @@ const HomePage = () => {
                   Excellent Reviews
                 </p>
               </div>
-              <Button
-                type="button"
-                className="w-full h-fit lg:w-fit flexCenter gap-3 py-5 px-8 rounded-full border text-white text-base whitespace-nowrap bg-dark-coral"
-              >
-                <Link to="vans">Find Your Van</Link>
+              <Button type="button" className="primary-btn">
+                <Link to="vans" className="link-attr">
+                  Find Your Van
+                </Link>
               </Button>
             </div>
             <aside className="relative flex flex-1 items-start">
-              <div className="relative z-20 w-[268px] h-fit flex flex-col gap-8 rounded-3xl px-7 py-8 bg-[#2C2927]">
+              <div className="group relative z-20 w-[268px] h-fit flex flex-col gap-8 rounded-3xl px-7 py-8 bg-[#2C2927] transition-all ease-in-out hover:text-white hover:bg-dark-coral">
                 <div className="flexBetween">
-                  <p className="regular-16 text-gray-500/90">Location</p>
+                  <p className="regular-16 text-gray-500/90 group-hover:text-gray-200/80">
+                    Location
+                  </p>
                   <IconMapPin width={24} height={24} className="text-white" />
                 </div>
                 <p className="text-xl font-bold text-white">
@@ -59,13 +60,13 @@ const HomePage = () => {
                 </p>
                 <div className="flexBetween">
                   <div className="flex flex-col">
-                    <h4 className="regular-16 block text-gray-500/90">
+                    <h4 className="regular-16 block text-gray-500/90 group-hover:text-gray-200/80">
                       Distance
                     </h4>
                     <p className="text-xl text-white">173.28 mi</p>
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="regular-16 block text-gray-500/90">
+                    <h4 className="regular-16 block text-gray-500/90 group-hover:text-gray-200/80">
                       Elevation
                     </h4>
                     <p className="text-xl text-white">2.040 km</p>
@@ -74,9 +75,9 @@ const HomePage = () => {
               </div>
             </aside>
           </section>
-          <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
-            <div className="w-full h-80 lg:h-[400px] xl:h-[600px] flex items-start justify-start gap-8 touch-pan-x overflow-x-auto">
-              <div className="h-full w-full min-w-[1100px] bg-van bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl">
+          <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-10">
+            <div className="w-full h-80 lg:h-[400px] xl:h-[600px] flex items-start justify-start gap-8 touch-pan-x overflow-x-auto focus:touch-pan-right">
+              <div className="h-full w-full min-w-[1000px] bg-van bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl">
                 <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
                   <div className="flexCenter gap-4">
                     <div className="rounded-full bg-dark-coral p-4">
@@ -89,7 +90,22 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-full w-full min-w-[1100px] bg-home bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl">
+              <div className="h-full w-full min-w-[1000px] bg-capture bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl">
+                <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
+                  <div className="flexCenter gap-4">
+                    <div className="rounded-full bg-dark-coral p-4">
+                      <IconMap width={28} height={28} className="text-white" />
+                    </div>
+                    <div className="flex flex-col gap-1 text-white">
+                      <h4 className="text-lg font-bold drop-shadow-2xl">
+                        Capture The Moment{" "}
+                      </h4>
+                      <p className="regular-14">Moments to Live</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="h-full w-full min-w-[1000px] bg-home bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl">
                 <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
                   <div className="flexCenter gap-4">
                     <div className="rounded-full bg-dark-coral p-4">
@@ -118,8 +134,8 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className="flexCenter flex-col py-24 overflow-hidden bg-feature bg-center bg-no-repeat">
-            <div className="max-container w-full relative flex justify-end px-6 lg:px-20">
+          <section className="flexCenter flex-col py-24 overflow-hidden bg-white bg-feature bg-center bg-no-repeat">
+            <div className="w-full relative max-container padding-container flex justify-end">
               <div className="flex flex-1 lg:min-h-[800px]">
                 <img
                   src={PhoneImg}
@@ -135,24 +151,30 @@ const HomePage = () => {
                 </h2>
                 <ul className="gap-10 lg:gap-20 grid md:grid-cols-2 mt-10 lg:mt-20">
                   {featuresData.map((item) => {
+                    const Icon = item.icon;
                     return (
                       <li
                         key={item.id}
                         className="w-full flex flex-1 flex-col items-start"
                       >
                         <div className="text-white p-4 lg:p-7 rounded-full bg-dark-coral">
-                          {item.icon}
+                          <Icon className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl lg:text-3xl mt-5 capitalize">
                           {item.title}
                         </h3>
-                        <p className="regular-16 text-gray-300 bg-white/80 mt-5 lg:mt-7 lg:bg-none">
+                        <p className="regular-16 text-gray-600 bg-white/80 mt-5 lg:mt-7 lg:bg-none">
                           {item.text}
                         </p>
                       </li>
                     );
                   })}
                 </ul>
+                <Button type="button" className="primary-btn">
+                  <Link to="about" className="link-attr">
+                    Who are we &rarr;
+                  </Link>
+                </Button>
               </article>
             </div>
           </section>
