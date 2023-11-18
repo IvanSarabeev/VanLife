@@ -16,8 +16,8 @@
     @apply font-medium pr-7 hover:underline hover:font-bold transition-all;
   }
 
-  .form-input {
-    @apply z-10 relative w-full h-auto py-2 px-3 text-[#FF8C38] rounded-t-md rounded-b-sm shadow-sm border-none bg-white focus:outline-none focus:ring-2 focus:ring-[#FF8C38];
+  .form-inputs {
+    @apply z-10 relative w-full h-auto py-2 px-3 text-black rounded-t-md rounded-b-sm shadow-sm border-none bg-white caret-[#FF8C38] focus:outline-none focus:ring-2 focus:ring-[#FF8C38];
   }
 
   .vans-container {

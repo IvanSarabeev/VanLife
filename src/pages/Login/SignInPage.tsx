@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../services/apiService";
 import SignInForm from "./SignInForm";
 import { UserData } from "../../types/types";
+import { useNavigate } from "react-router-dom";
+import { loginUser } from "../../services/apiService";
 
 const SignInPage = () => {
   const [status, setStatus] = useState<

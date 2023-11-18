@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useToggle = () => {
+export const useToggle = (): [boolean, () => void] => {
   const [on, setOn] = useState<boolean>(false);
 
   const handleToggle = () => {

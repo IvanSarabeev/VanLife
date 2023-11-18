@@ -14,7 +14,7 @@ const AboutPage = () => {
       <Layout>
         <main className="w-full min-h-screen relative overflow-hidden flexCenter flex-col font-inter bg-coral">
           <section className="flexCenter flex-col lg:flex-row gap-10  py-10 xl:py-20 max-container padding-container">
-            <article className="w-8/12 flex flex-wrap flex-col items-start justify-start max-container">
+            <article className="w-full lg:w-8/12 flex flex-wrap flex-col items-start justify-start max-container">
               <p className="regular-18 text-dark-coral mb-1.5 uppercase">
                 We think for you
               </p>
@@ -29,7 +29,7 @@ const AboutPage = () => {
                 from firsthand the magic of touring the world on Van.
               </p>
             </article>
-            <div className="relative z-20 w-full h-full lg:w-4/12 mr-10">
+            <div className="relative z-20 w-full h-full lg:w-4/12">
               <img
                 src={AboutHero}
                 alt="about-hero"
@@ -45,7 +45,7 @@ const AboutPage = () => {
             </div>
           </section>
           <section className="max-container flexCenter flex-col">
-            <div className="w-full max-container padding-container pb-20">
+            <aside className="w-full max-container padding-container pb-20">
               <p className="regular-18 text-[#FF8C38] -mt-1 mb-3 uppercase">
                 We are here for you
               </p>
@@ -61,7 +61,7 @@ const AboutPage = () => {
                   through the valley and reach the top of the mountain
                 </p>
               </div>
-            </div>
+            </aside>
             <div className="w-full relative flexCenter max-container">
               <img
                 src={Polite}
