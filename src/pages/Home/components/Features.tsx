@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../../components/html/Button";
 import { featuresData } from "../../../constants/data";
-import ImgPhone from "../../../assets/images/phone.png";
+// import ImgPhone from "../../../assets/images/phone.png";
+import ImgMockup from "../../../assets/images/design.png";
 
 const Features = () => {
   return (
@@ -10,10 +11,10 @@ const Features = () => {
       <div className="w-full relative max-container padding-container flex justify-end">
         <div className="flex flex-1 lg:min-h-[800px]">
           <img
-            src={ImgPhone}
+            src={ImgMockup}
             alt="phone"
             loading="lazy"
-            className="hidden lg:flex feature-phone"
+            className="mockup-img"
             decoding="async"
           />
         </div>

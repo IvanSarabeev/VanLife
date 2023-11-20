@@ -1,28 +1,33 @@
-import React, { useRef, useState, MouseEvent } from "react";
+import React, { useRef, useState, MouseEvent, TouchEvent } from "react";
 import { testimonial } from "../../../constants/data";
 import IconBxsQuoteAltLeft from "../../../assets/icons/Quote";
 import { ReactComponent as IconStar } from "../../../assets/svgs/star.svg";
+import { handleTouchMove, handleTouchStart } from "../../../utils/touchUtils";
+import { onMouseDown, onMouseUp, onMouseMove } from "../../../utils/dragUtils";
 
 const Testimonial = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isGrabbing, setIsGrabbing] = useState<boolean>(false);
   const [startX, setStartX] = useState<number>(0);
 
-  const handleGrabStart = (e: MouseEvent<HTMLDivElement>) => {
-    setIsGrabbing(true);
-    setStartX(e.clientX);
+  const onTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    handleTouchStart(e, setStartX);
   };
 
-  const handleGrabEdnd = (e: MouseEvent<HTMLDivElement>) => {
-    setIsGrabbing(false);
+  const onTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+    handleTouchMove(e, containerRef, startX, setStartX);
   };
 
-  const handleGrabbing = (e: MouseEvent<HTMLDivElement>) => {
-    if (isGrabbing && containerRef.current) {
-      const delta = startX - e.clientX;
-      containerRef.current.scrollLeft += delta;
-      setStartX(e.clientX);
-    }
+  const onMouseStart = (e: MouseEvent<HTMLDivElement>) => {
+    onMouseDown(e, setStartX, setIsGrabbing);
+  };
+
+  const onMouseEnd = (e: MouseEvent<HTMLDivElement>) => {
+    onMouseUp(e, setIsGrabbing);
+  };
+
+  const onMouseMoving = (e: MouseEvent<HTMLDivElement>) => {
+    onMouseMove(e, containerRef, isGrabbing, setStartX, startX);
   };
 
   return (
@@ -34,12 +39,14 @@ const Testimonial = () => {
       <aside
         aria-grabbed={true}
         ref={containerRef}
-        onMouseUp={handleGrabEdnd}
-        onMouseMove={handleGrabbing}
-        onMouseDown={handleGrabStart}
+        onMouseUp={onMouseEnd}
+        onMouseMove={onMouseMoving}
+        onMouseDown={onMouseStart}
+        onTouchMove={onTouchMove}
+        onTouchStart={onTouchStart}
         className="relative min-w-full py-4 mb-0 md:mb-4 lg:mb-6 xl:mb-8 max-container touch-pan-x overflow-x-auto focus:touch-pan-right"
       >
-        <div className="h-full w-auto flex flex-col lg:flex-row items-start justify-between mt-4 lg:mt-6 xl:mt-8 text-black select-none cursor-grab">
+        <div className="h-full w-auto flex flex-row items-start justify-between mt-4 lg:mt-6 xl:mt-8 text-black select-none cursor-grab">
           {testimonial.map((item, index) => {
             return (
               <div
@@ -56,6 +63,8 @@ const Testimonial = () => {
                     alt="portrait"
                     loading="lazy"
                     decoding="async"
+                    height={63}
+                    width={63}
                     className="rounded-full border-2 border-white shadow-md"
                   />
                   <p className="text-xs md:regular-14 group-hover:font-medium">

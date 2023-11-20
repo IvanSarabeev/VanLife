@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/html/Button";
 import { ReactComponent as IconStar } from "../../assets/svgs/star.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
+import HeroImg from "../../assets/images/hero.webp";
 import Layout from "../../components/Layout";
 import Testimonial from "./components/Testimonial";
 import Features from "./components/Features";
@@ -14,7 +15,14 @@ const HomePage = () => {
       <Layout>
         <main className="relative overflow-hidden font-inter text-custom-black bg-coral">
           <section className="max-container px-6 flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
-            <div className="absolute top-0 right-0 md:right-[-7rem] h-screen w-screen bg-hero bg-cover bg-center object-cover aspect-auto"></div>
+            <img
+              src={HeroImg}
+              alt="hero"
+              decoding="async"
+              loading="eager"
+              className="absolute top-0 right-0 md:right-[-7rem] h-screen w-screen bg-cover bg-center object-cover aspect-auto"
+            />
+            {/* <div className="absolute top-0 right-0 md:right-[-7rem] h-screen w-screen bg-hero bg-cover bg-center object-cover aspect-auto"></div> */}
             <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
               <h1 className="text-[52px] lg:text-[68px] heading-attr">
                 You got the travel plans, we got the travel vans.
@@ -43,16 +51,14 @@ const HomePage = () => {
               </div>
               <Button type="button" className="primary-btn">
                 <Link to="vans" className="link-attr">
-                  Find Your Van
+                  Find Your Van &rarr;
                 </Link>
               </Button>
             </div>
             <aside className="relative flex flex-1 items-start">
               <div className="group relative z-20 w-[268px] h-fit flex flex-col gap-8 rounded-3xl px-7 py-8 bg-[#2C2927] transition-all ease-in-out hover:text-white hover:bg-dark-coral">
                 <div className="flexBetween">
-                  <p className="regular-16 text-gray-500/90 group-hover:text-gray-200/80">
-                    Location
-                  </p>
+                  <p className="gray-subheading">Location</p>
                   <IconMapPin width={24} height={24} className="text-white" />
                 </div>
                 <p className="text-xl font-bold text-white">
@@ -60,15 +66,11 @@ const HomePage = () => {
                 </p>
                 <div className="flexBetween">
                   <div className="flex flex-col">
-                    <h4 className="regular-16 block text-gray-500/90 group-hover:text-gray-200/80">
-                      Distance
-                    </h4>
+                    <p className="gray-subheading">Distance</p>
                     <p className="text-xl text-white">173.28 mi</p>
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="regular-16 block text-gray-500/90 group-hover:text-gray-200/80">
-                      Elevation
-                    </h4>
+                    <p className="gray-subheading">Elevation</p>
                     <p className="text-xl text-white">2.040 km</p>
                   </div>
                 </div>
