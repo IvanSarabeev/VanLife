@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../components/html/Button";
+import Button from "../../../components/HTML/Button";
 import { VanDataExtended } from "../../../types/types";
 
 type SingleVanProps = {

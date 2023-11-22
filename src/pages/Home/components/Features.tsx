@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../../components/html/Button";
+import Button from "../../../components/HTML/Button";
 import { featuresData } from "../../../constants/data";
-// import ImgPhone from "../../../assets/images/phone.png";
 import ImgMockup from "../../../assets/images/design.png";
 
 const Features = () => {
@@ -33,8 +32,8 @@ const Features = () => {
                   key={item.id}
                   className="w-full flex flex-1 flex-col items-start"
                 >
-                  <div className="group text-white p-4 lg:p-7 rounded-full bg-dark-coral hover:bg-black transition-all ease-in-out">
-                    <Icon className="w-7 h-7 group-hover:text-dark-coral" />
+                  <div className="group flex items-center justify-center text-white p-4 lg:p-7 rounded-full bg-dark-coral hover:bg-black transition-all ease-in-out">
+                    <Icon className="w-6 md:w-8 h-6 md:h-8 group-hover:text-dark-coral" />
                   </div>
                   <h3 className="text-xl lg:text-3xl mt-5 capitalize">
                     {item.title}
@@ -46,11 +45,11 @@ const Features = () => {
               );
             })}
           </ul>
-          <Button type="button" className="primary-btn">
-            <Link to="about" className="link-attr">
+          <Link to="about" className="remove-outline">
+            <Button type="button" className="primary-btn">
               Who are we &rarr;
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </article>
       </div>
     </>

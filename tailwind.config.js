@@ -14,6 +14,7 @@ module.exports = {
         "van": "url('../src/assets/images/vans.jpg')",
         "capture": "url('../src/assets/images/capture.jpg')",
         "feature": "url('../src/assets/images/feature.webp')",
+        "topography": "url('../src/assets/svgs/topography.svg')",
       },
       backgroundColor: {
         "coral": "#FFF7ED",

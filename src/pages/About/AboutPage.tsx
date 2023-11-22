@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
-import Button from "../components/html/Button";
-import Meter from "../assets/images/meter.png";
-import Polite from "../assets/images/about.jpg";
-import AboutHero from "../assets/images/about-hero.jpg";
-import { ReactComponent as IconCheck } from "../assets/svgs/check.svg";
-import { ReactComponent as IconMapPin } from "../assets/svgs/map-pin.svg";
+import Layout from "../../components/Layouts/Layout";
+import Button from "../../components/HTML/Button";
+import Meter from "../../assets/images/meter.png";
+import Polite from "../../assets/images/about.jpg";
+import AboutHero from "../../assets/images/about-hero.jpg";
+import { ReactComponent as IconCheck } from "../../assets/svgs/check.svg";
+import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
+import { partnersLists, showcaseTrip } from "../../constants/data";
+import ProviderBenefits from "./components/Benefits";
+import SubscribeBanner from "../../components/Banner/SubscribeBanner";
+import MeetTeam from "./components/MeetTeam";
 
 const AboutPage = () => {
   return (
@@ -18,8 +22,8 @@ const AboutPage = () => {
               <p className="regular-18 text-dark-coral mb-1.5 uppercase">
                 We think for you
               </p>
-              <h2 className="text-[40px] xl:text-[64px] heading-attr xl:max-w-[800px]">
-                Don’t squeeze in a SUV, when you could relax in van
+              <h2 className="text-[40px] xl:text-[64px] heading-attr xl:max-w-[700px]">
+                Don’t squeeze in SUV, when you could relax in van
               </h2>
               <p className="max-w-[620px] regular-14 sm:regular-16 mt-2">
                 Our mission is to enliven your road trip with the perfect travel
@@ -44,6 +48,17 @@ const AboutPage = () => {
               </Button>
             </div>
           </section>
+          <section className="flexCenter flex-col padding-container max-container py-8">
+            <h3 className="text-2xl md:text-3xl xl:text-4xl text-custom-black text-center font-bold py-4">
+              Nº 1 road trip provider in Europe
+            </h3>
+            <aside className="gap-4 lg:gap-0 flex flex-wrap lg:flex-nowrap items-center justify-center my-8 bg-transparent">
+              {showcaseTrip.map((item, index) => {
+                const Icon = item.icon;
+                return <ProviderBenefits key={index} item={item} Icon={Icon} />;
+              })}
+            </aside>
+          </section>
           <section className="max-container flexCenter flex-col">
             <aside className="w-full max-container padding-container pb-20">
               <p className="regular-18 text-[#FF8C38] -mt-1 mb-3 uppercase">
@@ -53,7 +68,7 @@ const AboutPage = () => {
                 <h3 className="text-[40px] lg:text-[64px] heading-attr xl:max-w-[640px]">
                   We Guide You throught Everything
                 </h3>
-                <p className=" xl:max-w-xl regular-16">
+                <p className="xl:max-w-xl regular-16">
                   Only with the hilink application you will no longer get lost
                   and get lost again, because we already support offline maps
                   when there is no internet connection in the field. Invite your
@@ -100,21 +115,54 @@ const AboutPage = () => {
               </div>
             </div>
           </section>
-          <section className="flexCenter flex-col">
-            {/* <div className="flexCenter flex-wrap gap-10 lg:gap-20">
-              <div className="">
-                <h4></h4>
-                <p></p>
+          <section className="gap-4 md:gap-6 lg:gap-8 flex flex-col lg:flex-row items-center padding-container max-container py-8 max-w-5xl">
+            <img
+              src="https://images.prismic.io/indiecampers-demo/aba40e74-c8fd-4dcc-8590-76098cdd2b6d_IndieCampersSSDSC07995.jpg?auto=compress,format&rect=0,0,4980,3320&w=1200&h=800"
+              alt="the-cruiser"
+              decoding="async"
+              loading="lazy"
+              className="relative w-[490px] h-fit rounded-2xl aspect-auto object-cover object-center"
+            />
+            <div className="relative gap-2 flex flex-col items-start justify-center">
+              <div className="relative ml-0 lg:-ml-28 -mt-16 lg:mt-0 pt-8 lg:pr-0 px-6 lg:pl-5 pb-5 text-left rounded-3xl bg-coral">
+                <p className="regular-16 text-[#FF8C38] mb-1 uppercase">
+                  Your trusted partner
+                </p>
+                <h4 className="text-[28px] lg:text-[44px] heading-attr capitalize">
+                  We are here 24/7
+                </h4>
               </div>
-              <div className="">
-                <h4></h4>
-                <p></p>
+              <div className="flex gap-8">
+                <ul className="gap-2 flex flex-col items-start justify-start">
+                  {partnersLists.map((label, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="group gap-2 flex items-center justify-center regular-16 hover:underline underline-offset-4 hover:text-dark-coral transition-all ease-in-out duration-100 delay-100"
+                      >
+                        <IconCheck
+                          width={24}
+                          height={24}
+                          className="group-hover:fill-[#87d195] text-black transition-all ease-in duration-100 "
+                        />
+                        {label.text}
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-              <div className="">
-                <h4></h4>
-                <p></p>
-              </div>
-            </div> */}
+              <Link to="/vans" className="remove-outline">
+                <Button type="button" className="primary-btn">
+                  Chose van &rarr;
+                </Button>
+              </Link>
+            </div>
+          </section>
+          <section className="gap-6 flex flex-col items-center justify-center py-10 max-container padding-container">
+            <MeetTeam />
+          </section>
+          <section className="py-10 max-container">
+            <SubscribeBanner />
           </section>
         </main>
       </Layout>

@@ -2,6 +2,9 @@ import { ReactComponent as IconMap } from "../assets/svgs/map.svg";
 import { ReactComponent as IconPhoto } from "../assets/svgs/photo.svg";
 import { ReactComponent as IconCalendar } from "../assets/svgs/calendar.svg";
 import { ReactComponent as IconChartLine } from "../assets/svgs/chart-line.svg";
+import { ReactComponent as IconUsers } from "../assets/svgs/users.svg";
+import { ReactComponent as IconSparkles } from "../assets/svgs/sparkles.svg";
+import { ReactComponent as IconCreditCard } from "../assets/svgs/credit-card.svg";
 
 export const featuresData = [
   {
@@ -62,5 +65,61 @@ export const testimonial = [
     text: "The customer service team was wonderful, everything was perfect, we had a friendly welcoming and they very clear explained how it all works - they made our camper van experience easy and fun and not half scary as I was thinking. ",
     imgSrc:
       "https://res.cloudinary.com/hqxyevlf6/image/upload/c_thumb,f_auto,g_faces,h_60,w_60,z_0.6/x7ycu7jq7x4wwb5tlajd.jpg",
+  },
+];
+
+export const showcaseTrip = [
+  {
+    icon: IconSparkles,
+    iconFill: "text-[#ffd100]",
+    background: "bg-[#ffee99]",
+    title: "Best price",
+    text: "Cancel your trip with a full refund up to 12 days or before your pick-up date",
+  },
+  {
+    icon: IconUsers,
+    iconFill: "text-[#81c6d6]",
+    background: "bg-[#e6f4f7]",
+    title: "Trusted by thousands",
+    text: "Pick up your desired campervan at +20 locations accross Europe",
+  },
+  {
+    icon: IconCreditCard,
+    iconFill: "text-[#87d195]",
+    background: "bg-[#e7f7ec]",
+    title: "Wide range of brands.",
+    text: "Chose between a vans that are fully equipped, and ready to go on trip",
+  },
+];
+
+export const partnersLists = [
+  { text: "20+ campervans across Europe" },
+  { text: "Fully digital experience" },
+  { text: "Bedding, kitchen & emergency kit" },
+  { text: "Airport optional" },
+  { text: "One-way trips available" },
+  { text: "24/7 Pick-up & Drop-off" },
+  { text: "Insurance & road assistance" },
+  { text: "Unlimited miles/km" },
+];
+
+export const vanStaff = [
+  {
+    imgSrc:
+      "https://img.freepik.com/free-photo/portrait-successful-young-entrepreneur-standing-looking-camera-crossing-arms-smiling_482257-5018.jpg?w=996&t=st=1700659902~exp=1700660502~hmac=e6ad6415f5f9dc512ff9cc8ccd51be5a8d5469df3a691adb44833e5d6b295bd7",
+    name: "Jessica Russel",
+    title: "Insurance Specialist",
+  },
+  {
+    imgSrc:
+      "https://img.freepik.com/free-photo/young-businessman-happy-expression_1194-1653.jpg?w=996&t=st=1700661160~exp=1700661760~hmac=1ac2113a6ec9965d7570af7fa5e5755f0b54150d3e02129a21f7d1aa0c8192bf",
+    name: "Greg MacBarthy",
+    title: "Ceo of VanLife",
+  },
+  {
+    imgSrc:
+      "https://img.freepik.com/free-photo/front-view-man-working-travel-agency_52683-136439.jpg?w=996&t=st=1700659794~exp=1700660394~hmac=e67a7836ad244dc8ba50bf6cbce86d08c9e05556ec1ae4ea0ec4815411c8d896",
+    name: "Michal Capland",
+    title: "Marketing Specialist",
   },
 ];

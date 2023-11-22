@@ -3,7 +3,7 @@ import { VanDataExtended } from "../../types/types";
 import { useParams, NavLink, Outlet, useOutletContext } from "react-router-dom";
 import { fetchVanIdData } from "../../services/apiService";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
-import Button from "../../components/html/Button";
+import Button from "../../components/HTML/Button";
 import DetailContent from "./DetailContent";
 import OutletNav from "./OutletNav/OutletNav";
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts/Layout";
 import { VanData } from "../../types/types";
 import { fetchVansData } from "../../services/apiService";
-import VansLists from "./VansLists";
-import VansNav from "./VansNav";
+import ListedVans from "./components/ListedVans";
+import Navigation from "./components/Navigation";
 import { useSearchParams } from "react-router-dom";
 
 const VansPage = () => {
@@ -33,14 +33,14 @@ const VansPage = () => {
     <>
       <Layout>
         <main className="px-4 md:px-6 lg:px-8 xl:px-10 pb-10 bg-coral">
-          <h2 className="text-2xl md:text-3xl font-bold leading-8 text-custom-black pt-14">
-            Explore our van options
+          <h2 className="text-2xl lg:text-[36px] font-bold capitalize">
+            Explore Listed Vans
           </h2>
-          <VansNav typeFilter={typeFilter} />
+          <Navigation typeFilter={typeFilter} />
           <section className="vans-container">
             {van.length > 0 ? (
               displayedVans.map((item) => {
-                return <VansLists key={item.id} item={item} />;
+                return <ListedVans key={item.id} item={item} />;
               })
             ) : (
               <p>Loading data</p>

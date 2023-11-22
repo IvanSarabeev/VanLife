@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const navLinks = [
   { to: "income", title: "Income" },

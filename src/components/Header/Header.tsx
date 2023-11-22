@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import { ReactComponent as IconHamburger } from "../../assets/svgs/hamburger.svg";
 import { ReactComponent as IconXMark } from "../../assets/svgs/x-mark.svg";
-import Button from "../html/Button";
+import Button from "../HTML/Button";
 import MobileNav from "./MobileNav";
 
 const Header = () => {

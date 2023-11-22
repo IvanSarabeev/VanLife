@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../components/html/Button";
+import Button from "../../components/HTML/Button";
 import { ReactComponent as IconStar } from "../../assets/svgs/star.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
 import HeroImg from "../../assets/images/hero.webp";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts/Layout";
 import Testimonial from "./components/Testimonial";
 import Features from "./components/Features";
 import GallerySlider from "./components/GallerySlider";
@@ -22,7 +22,6 @@ const HomePage = () => {
               loading="eager"
               className="absolute top-0 right-0 md:right-[-7rem] h-screen w-screen bg-cover bg-center object-cover aspect-auto"
             />
-            {/* <div className="absolute top-0 right-0 md:right-[-7rem] h-screen w-screen bg-hero bg-cover bg-center object-cover aspect-auto"></div> */}
             <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
               <h1 className="text-[52px] lg:text-[68px] heading-attr">
                 You got the travel plans, we got the travel vans.
@@ -49,11 +48,11 @@ const HomePage = () => {
                   Excellent Reviews
                 </p>
               </div>
-              <Button type="button" className="primary-btn">
-                <Link to="vans" className="link-attr">
+              <Link to="vans" className="remove-outline">
+                <Button type="button" className="primary-btn">
                   Find Your Van &rarr;
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
             <aside className="relative flex flex-1 items-start">
               <div className="group relative z-20 w-[268px] h-fit flex flex-col gap-8 rounded-3xl px-7 py-8 bg-[#2C2927] transition-all ease-in-out hover:text-white hover:bg-dark-coral">
@@ -77,7 +76,7 @@ const HomePage = () => {
               </div>
             </aside>
           </section>
-          <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-10">
+          <section className="2xl:max-container relative flex flex-col py-10 lg:mb-6">
             <GallerySlider />
           </section>
           <section className="w-full flexCenter flex-col py-10 lg:py-20">

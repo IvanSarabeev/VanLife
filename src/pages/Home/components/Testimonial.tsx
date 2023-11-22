@@ -78,7 +78,7 @@ const Testimonial = () => {
       </aside>
       <div className="flex flex-col items-center justify-center mx-auto padding-container">
         <h4 className="text-xl md:text-2xl font-bold text-center mb-2 xl:mb-4">
-          More than 100,000 travellers were ahead of you
+          More than 10,000 travellers were ahead of you
         </h4>
         <span className="gap-2 flex items-center justify-center">
           {[...Array(5)].map((_, index) => (
@@ -90,7 +90,7 @@ const Testimonial = () => {
             />
           ))}
           <p className="regular-14 xl:regular-16">
-            5/5 • Based on 75,819 reviews
+            5/5 • Based on 12,819 reviews
           </p>
         </span>
       </div>
