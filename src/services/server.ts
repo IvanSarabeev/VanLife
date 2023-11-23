@@ -1,5 +1,13 @@
-import { createServer, Model, Response } from "miragejs";
-import { User } from "../types/types";
+import {
+  createServer,
+  Model,
+  Response,
+  Factory,
+  belongsTo,
+  hasMany,
+  RestSerializer,
+} from "miragejs";
+import { User, VanData } from "types/types";
 
 createServer({
   models: {
@@ -10,6 +18,25 @@ createServer({
       password: "password123",
       name: "John Doe",
     }),
+  },
+
+  factories: {
+    van: Factory.extend<VanData>({
+      id: "Default id",
+      type: "Default Type",
+      name: "Default Name",
+      year: 2022,
+      price: 0,
+      fuel: "Default Fuel",
+      model: "Default Model",
+      mileage: "Default Mileage",
+      gearType: "Default gearType",
+      imageUrl: "Default imageUrl",
+    }),
+  },
+
+  serializers: {
+    application: RestSerializer,
   },
 
   seeds(server) {
@@ -79,7 +106,7 @@ createServer({
     server.create("van", {
       id: "3",
       name: "Reliable Red",
-      year: 208,
+      year: 2009,
       fuel: "petrol",
       model: "Volkswagen Buzz 2.0",
       gears: "7",
@@ -250,7 +277,7 @@ createServer({
       year: 2017,
       fuel: "diesel",
       model: "Renoult Rx 47",
-      gears: "",
+      gears: "8",
       gearType: "automatic",
       mileage: "47,628",
       consumption: "",
@@ -343,6 +370,41 @@ createServer({
 
     this.get("/vans", (schema) => {
       return schema.all("van");
+    });
+
+    this.get("/vans", (schema, request) => {
+      const sortBy = (request.queryParams.sortBy as string) || "";
+      const sortOrder = request.queryParams.sortOrder || "asc";
+
+      let vans = schema.all("van");
+
+      if (sortBy) {
+        // Sorting the models directly without using an external library
+        vans.models = vans.models.sort((a, b): any => {
+          // Assuming sortBy is a valid property name in VanData
+          const aValue = (a as any)[sortBy];
+          const bValue = (b as any)[sortBy];
+
+          const actualSortOrder = Array.isArray(sortOrder)
+            ? sortOrder[0]
+            : sortOrder;
+
+          if (aValue < bValue) {
+            return actualSortOrder.toLowerCase() === "asc" ? -1 : 1;
+          }
+          if (aValue > bValue) {
+            return actualSortOrder.toLowerCase() === "asc" ? 1 : -1;
+          }
+
+          return 0;
+        });
+      }
+
+      if (Array.isArray(sortOrder) && sortOrder[0].toLowerCase() === "desc") {
+        vans.models.reverse();
+      }
+
+      return vans;
     });
 
     this.get("/vans/:id", (schema, request) => {

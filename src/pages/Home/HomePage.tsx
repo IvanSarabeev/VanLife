@@ -4,7 +4,7 @@ import Button from "../../components/HTML/Button";
 import { ReactComponent as IconStar } from "../../assets/svgs/star.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
 import HeroImg from "../../assets/images/hero.webp";
-import Layout from "../../components/Layouts/Layout";
+import Layout from "components/Layouts/Layout";
 import Testimonial from "./components/Testimonial";
 import Features from "./components/Features";
 import GallerySlider from "./components/GallerySlider";

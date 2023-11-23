@@ -13,6 +13,7 @@ export interface VanData {
 
 export interface VanDataExtended extends VanData {
   gears: number;
+  rating: number;
   engPower: string;
   visiblity: string;
   consumption: string;

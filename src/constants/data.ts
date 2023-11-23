@@ -129,3 +129,16 @@ export const navLinks = [
   { to: "vans", title: "Vans" },
   { to: "reviews", title: "Reviews" },
 ];
+
+export const categoryNav = [
+  { id: 1, title: "Simple", type: "simple" },
+  { id: 2, title: "Luxury", type: "luxury" },
+  { id: 3, title: "Rugged", type: "rugged" },
+];
+
+export const selectOptions = [
+  { value: "Date: newest First" },
+  { value: "Most Recent" },
+  { value: "Lowest Cost" },
+  { value: "Highest Cost" },
+];

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Layout from "components/Layouts/Layout";
 import { VanData } from "types/types";
 import { fetchVansData } from "services/apiService";
 import ListedVans from "./components/ListedVans";
 import Navigation from "./components/Navigation";
-import { useSearchParams } from "react-router-dom";
+import FilterVans from "./components/FilterVans";
+import { sortedItems } from "utils/sortItem";
 
 const VansPage = () => {
   const [van, setVan] = useState<VanData[]>([]);
@@ -18,7 +20,16 @@ const VansPage = () => {
 
   const handleFetch = async () => {
     try {
-      const data = await fetchVansData();
+      const sortBy = searchParams.get("sortBy") || "newest";
+      const sortOrder = searchParams.get("sortOrder") || "asc";
+
+      const data = await fetchVansData(sortBy, sortOrder);
+      const sortedData = sortedItems(data.vans, sortBy);
+
+      if (sortOrder.toLocaleLowerCase() === "desc") {
+        sortedData.reverse();
+      }
+
       setVan(data.vans);
     } catch (error) {
       console.error(error);
@@ -27,7 +38,7 @@ const VansPage = () => {
 
   useEffect(() => {
     handleFetch();
-  }, []);
+  }, [searchParams]);
 
   return (
     <>
@@ -36,7 +47,10 @@ const VansPage = () => {
           <h2 className="text-2xl lg:text-[36px] font-bold capitalize">
             Featured Listings
           </h2>
-          <Navigation typeFilter={typeFilter} />
+          <nav className="flex flex-col sm:flex-row items-center justify-between mb-4">
+            <Navigation typeFilter={typeFilter} />
+            <FilterVans handleFetch={handleFetch} />
+          </nav>
           <section className="product-container selection:bg-[#1A3760] selection:text-white selection:drop-shadow-none">
             {van.length > 0 ? (
               displayedVans.map((item, index) => {

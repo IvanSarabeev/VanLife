@@ -2,8 +2,8 @@ import React, { useRef, useState, MouseEvent, TouchEvent } from "react";
 import { testimonial } from "../../../constants/data";
 import IconBxsQuoteAltLeft from "../../../assets/icons/Quote";
 import { ReactComponent as IconStar } from "../../../assets/svgs/star.svg";
-import { handleTouchMove, handleTouchStart } from "../../../utils/touchUtils";
-import { onMouseDown, onMouseUp, onMouseMove } from "../../../utils/dragUtils";
+import { handleTouchMove, handleTouchStart } from "../../../utils/touchEvent";
+import { onMouseDown, onMouseUp, onMouseMove } from "../../../utils/dragEvent";
 
 const Testimonial = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);

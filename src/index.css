@@ -20,7 +20,7 @@
   }
 
   .product-container {
-    @apply grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center justify-center gap-6 xl:gap-4;
+    @apply grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center justify-center font-inter gap-6 xl:gap-4;
   }
 
   .max-container {
@@ -85,5 +85,9 @@
 
   .border-one {
     @apply border-[1px] border-solid border-[#EAEAEA];
+  }
+
+  .filter-btn {
+    @apply h-10 w-10 leading-10 rounded-lg text-center drop-shadow bg-white;
   }
 }

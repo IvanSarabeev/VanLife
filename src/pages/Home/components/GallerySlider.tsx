@@ -1,7 +1,7 @@
 import React, { useRef, useState, MouseEvent, TouchEvent } from "react";
 import { ReactComponent as IconMap } from "../../../assets/svgs/map.svg";
-import { handleTouchMove, handleTouchStart } from "../../../utils/touchUtils";
-import { onMouseDown, onMouseUp, onMouseMove } from "../../../utils/dragUtils";
+import { handleTouchMove, handleTouchStart } from "../../../utils/touchEvent";
+import { onMouseDown, onMouseUp, onMouseMove } from "../../../utils/dragEvent";
 
 const GallerySlider = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
