@@ -192,7 +192,7 @@ createServer({
       name: "The Cruiser",
       year: 2020,
       fuel: "diesel",
-      model: "Mercedec Sprinter Motorhomes",
+      model: "Mercedec Sprinter",
       gears: "9",
       gearType: "automatic",
       mileage: "24,982",

@@ -23,6 +23,10 @@
     @apply grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center justify-center font-inter gap-6 xl:gap-4;
   }
 
+  .flexProduct-container {
+    @apply flex flex-col items-start justify-start gap-4 xl:gap-6;
+  }
+
   .max-container {
     @apply max-w-[1440px] mx-auto;
   }

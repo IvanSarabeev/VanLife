@@ -20,7 +20,7 @@ const VansLists = ({ item }: VansListProps) => {
         />
         <div className="flex flex-col items-start justify-center py-4 px-2">
           <div className="w-full flex items-center justify-between pb-4 text-[#1A3760]">
-            <h4 className="regular-14 font-semibold">
+            <h4 className="regular-14 font-semibold overflow-hidden truncate">
               {item.model} - {item.year}
             </h4>
             <p className="regular-16 font-semibold leading-6">

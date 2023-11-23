@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "components/Layouts/Layout";
 import { VanData } from "types/types";
@@ -10,7 +10,9 @@ import { sortedItems } from "utils/sortItem";
 
 const VansPage = () => {
   const [van, setVan] = useState<VanData[]>([]);
+  const [sortBy, setSortBy] = useState<string>("newest");
   const [searchParams, setSearchParams] = useSearchParams();
+  const [layout, setLayout] = useState<string>("grid");
 
   const typeFilter = searchParams.get("type");
 
@@ -18,27 +20,39 @@ const VansPage = () => {
     ? van.filter((char) => char.type === typeFilter)
     : van;
 
-  const handleFetch = async () => {
+  const handleFetch = useCallback(async () => {
     try {
-      const sortBy = searchParams.get("sortBy") || "newest";
       const sortOrder = searchParams.get("sortOrder") || "asc";
 
       const data = await fetchVansData(sortBy, sortOrder);
-      const sortedData = sortedItems(data.vans, sortBy);
+      let sortedData = sortedItems(data.vans, sortBy);
 
-      if (sortOrder.toLocaleLowerCase() === "desc") {
-        sortedData.reverse();
+      if (sortOrder.toLowerCase() === "desc") {
+        sortedData = sortedData.reverse();
       }
 
-      setVan(data.vans);
+      setVan(sortedData);
     } catch (error) {
       console.error(error);
     }
+  }, [searchParams, sortBy]);
+
+  const handleSortChange = async (
+    e: React.ChangeEvent<HTMLSelectElement>,
+    setSortOption: React.Dispatch<React.SetStateAction<string>>
+  ) => {
+    const selectedOption = e.target.value;
+    setSortOption(selectedOption);
+    setSortBy(selectedOption.replace(/-/g, " "));
   };
 
   useEffect(() => {
     handleFetch();
-  }, [searchParams]);
+  }, [handleFetch]);
+
+  const handleLayoutChange = (newLayout: string) => {
+    setLayout(newLayout);
+  };
 
   return (
     <>
@@ -49,9 +63,17 @@ const VansPage = () => {
           </h2>
           <nav className="flex flex-col sm:flex-row items-center justify-between mb-4">
             <Navigation typeFilter={typeFilter} />
-            <FilterVans handleFetch={handleFetch} />
+            <FilterVans
+              handleFetch={handleFetch}
+              handleSortChange={handleSortChange}
+              handleLayoutChange={handleLayoutChange}
+            />
           </nav>
-          <section className="product-container selection:bg-[#1A3760] selection:text-white selection:drop-shadow-none">
+          <section
+            className={`${
+              layout === "grid" ? "product-container" : "flexProduct-container"
+            } selection:bg-[#1A3760] selection:text-white selection:drop-shadow-none`}
+          >
             {van.length > 0 ? (
               displayedVans.map((item, index) => {
                 return <ListedVans key={index} item={item} />;

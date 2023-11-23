@@ -2,7 +2,6 @@ const URL = "/api/vans";
 
 export const fetchVansData = async (sortBy?: string, sortOrder?: string) => {
   try {
-    // const response = await fetch(URL);
     const response = await fetch(
       `${URL}?sortBy=${sortBy}&sortOrder=${sortOrder}`
     );

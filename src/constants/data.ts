@@ -138,7 +138,7 @@ export const categoryNav = [
 
 export const selectOptions = [
   { value: "Date: newest First" },
-  { value: "Most Recent" },
+  { value: "Oldest Year" },
   { value: "Lowest Cost" },
   { value: "Highest Cost" },
 ];

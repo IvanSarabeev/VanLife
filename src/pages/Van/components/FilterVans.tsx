@@ -3,16 +3,24 @@ import Button from "components/HTML/Button";
 import { FaList } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import { selectOptions } from "constants/data";
-import { sortedItems, handleSortChange } from "utils/sortItem";
 
 type FilterProps = {
   handleFetch: () => void;
+  handleSortChange: (
+    e: React.ChangeEvent<HTMLSelectElement>,
+    setSortOption: React.Dispatch<React.SetStateAction<string>>
+  ) => Promise<void>;
+  handleLayoutChange: (newLayout: string) => void;
 };
 
-const FilterVans = ({ handleFetch }: FilterProps) => {
-  const [sortOption, setSortOption] = useState("newest");
+const FilterVans = ({
+  handleFetch,
+  handleSortChange,
+  handleLayoutChange,
+}: FilterProps) => {
+  const [sortOption, setSortOption] = useState("date: newest first");
 
-  const handleSortSelect = (e: any) => {
+  const handleSortSelect = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     handleSortChange(e, setSortOption);
     handleFetch();
   };
@@ -43,12 +51,12 @@ const FilterVans = ({ handleFetch }: FilterProps) => {
         </select>
       </li>
       <li className="filter-btn border-one mr-2">
-        <Button>
+        <Button onClick={() => handleLayoutChange("grid")}>
           <BsFillGridFill height={20} width={14} />
         </Button>
       </li>
       <li className="filter-btn border-one">
-        <Button>
+        <Button onClick={() => handleLayoutChange("list")}>
           <FaList height={20} width={14} />
         </Button>
       </li>
