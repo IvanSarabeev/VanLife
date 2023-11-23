@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../components/Layouts/Layout";
-import Button from "../../components/HTML/Button";
-import Input from "../../components/HTML/Input";
+import Layout from "components/Layouts/Layout";
+import Button from "components/HTML/Button";
+import Input from "components/HTML/Input";
 import { Link } from "react-router-dom";
 import { UserData } from "../../types/types";
 import { ReactComponent as IconSpinner } from "../../assets/svgs/spinner.svg";

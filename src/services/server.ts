@@ -16,6 +16,14 @@ createServer({
     server.create("van", {
       id: "1",
       name: "Modest Explorer",
+      year: 2007,
+      fuel: "petrol",
+      model: "Volkswagen Buzz 1.9",
+      gears: "6",
+      gearType: "handle",
+      mileage: "94,495",
+      consumption: "",
+      engPower: "",
       price: 60,
       description:
         "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
@@ -29,8 +37,14 @@ createServer({
     server.create("van", {
       id: "2",
       name: "Marco Polo",
-      // model: "Marco Polo 300D 2.0",
-      // year: 2021,
+      year: 2021,
+      fuel: "diesel",
+      model: "Marco Polo 300D 2.0",
+      gears: "8",
+      gearType: "automatic",
+      mileage: "38,231",
+      consumption: "",
+      engPower: "239 Hp",
       price: 80,
       description:
         "The most classic campervan on the market, combining a luxury transformation with the quality and comfort of a top-of-the-range Mercedes Viano model.The most classic campervan on the market, combining a luxury transformation with the quality and comfort of a top-of-the-range Mercedes Viano model.",
@@ -38,11 +52,6 @@ createServer({
         "https://images.prismic.io/indiecampers-demo/091021a3-6905-4cec-a9f4-fa492b8e33b0_20221012_145159.jpg?auto=compress,format&rect=0,167,4000,2667&w=1200&h=800",
       type: "luxury",
       visiblity: "Visible",
-      // gears: 9,
-      // gearType: "automatic",
-      // driveChair: "rear",
-      // consumption: "9 Lts/ 100 Kms",
-      // engPower: "239Hp",
       imgGallery: [
         {
           id: 1,
@@ -70,6 +79,14 @@ createServer({
     server.create("van", {
       id: "3",
       name: "Reliable Red",
+      year: 208,
+      fuel: "petrol",
+      model: "Volkswagen Buzz 2.0",
+      gears: "7",
+      gearType: "handle",
+      mileage: "77,124",
+      consumption: "",
+      engPower: "",
       price: 100,
       description:
         "Reliable Red is a van that was made for travelling. The inside is comfortable and cozy, with plenty of space to stretch out in. There's a small kitchen, so you can cook if you need to. You'll feel like home as soon as you step out of it.",
@@ -104,6 +121,14 @@ createServer({
     server.create("van", {
       id: "4",
       name: "Dreamfinder",
+      year: 2006,
+      fuel: "petrol",
+      model: "Volkswagen Buzz 1.8",
+      gears: "6",
+      gearType: "handle",
+      mileage: "108,294",
+      consumption: "",
+      engPower: "",
       price: 65,
       description:
         "Dreamfinder is the perfect van to travel in and experience. With a ceiling height of 2.1m, you can stand up in this van and there is great head room. The floor is a beautiful glass-reinforced plastic (GRP) which is easy to clean and very hard wearing. A large rear window and large side windows make it really light inside and keep it well ventilated.",
@@ -138,6 +163,14 @@ createServer({
     server.create("van", {
       id: "5",
       name: "The Cruiser",
+      year: 2020,
+      fuel: "diesel",
+      model: "Mercedec Sprinter Motorhomes",
+      gears: "9",
+      gearType: "automatic",
+      mileage: "24,982",
+      consumption: "",
+      engPower: "",
       price: 120,
       description:
         "The Cruiser is a van for those who love to travel in comfort and luxury. With its many windows, spacious interior and ample storage space, the Cruiser offers a beautiful view wherever you go.",
@@ -172,6 +205,14 @@ createServer({
     server.create("van", {
       id: "6",
       name: "Green Wonder",
+      year: 2008,
+      fuel: "petrol",
+      model: "Volkswagen Buzz",
+      gears: "",
+      gearType: "handle",
+      mileage: "110,248",
+      consumption: "",
+      engPower: "",
       price: 70,
       description:
         "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
@@ -206,6 +247,14 @@ createServer({
     server.create("van", {
       id: "7",
       name: "Green Peace",
+      year: 2017,
+      fuel: "diesel",
+      model: "Renoult Rx 47",
+      gears: "",
+      gearType: "automatic",
+      mileage: "47,628",
+      consumption: "",
+      engPower: "",
       price: 95,
       description:
         "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
@@ -240,19 +289,20 @@ createServer({
     server.create("van", {
       id: "8",
       name: "Wrangler",
-      // year: 2022,
+      year: 2022,
+      fuel: "petrol",
+      model: "Jeep Wrangler Scout",
+      gears: 8,
+      gearType: "automatic",
+      mileage: "77,362",
+      consumption: "16 MPG(US)",
+      engPower: "270 HP",
       price: 95,
       description:
         "Jeep Wrangler Unlimited Sport S , an iconic vehicle built for rugged terrains, equipped with automatic transmission, cruise control and A/C, a rear camera and 4-wheel drive.",
       imageUrl:
         "https://images.prismic.io/indiecampers-demo/d777a652-2922-45a4-8008-5490d0a10903_Jeep_Camper001+(16).jpg?auto=compress,format&rect=0,53,1280,853&w=1200&h=800",
       type: "rugged",
-      gears: 8,
-      gearType: "automatic",
-      driveChair: "rear",
-      fuel: "petrol",
-      consumption: "16 MPG(US)",
-      engPower: "270 HP",
       visiblity: "Visible",
       imgGallery: [
         {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useToggle } from "../../hooks/useToggle";
-import { headerLinks } from "../../constants/data";
+import { useToggle } from "hooks/useToggle";
+import { headerLinks } from "constants/data";
 import {
   motion,
   useScroll,
@@ -10,8 +10,9 @@ import {
 } from "framer-motion";
 import { ReactComponent as IconHamburger } from "../../assets/svgs/hamburger.svg";
 import { ReactComponent as IconXMark } from "../../assets/svgs/x-mark.svg";
-import Button from "../HTML/Button";
+import Button from "components/HTML/Button";
 import MobileNav from "./MobileNav";
+import { scrollToTop } from "utils/scrollToTop";
 
 const Header = () => {
   const [show, handleToggle] = useToggle();
@@ -33,6 +34,7 @@ const Header = () => {
     <motion.header
       variants={{ visibility: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hidden ? "block" : "visible"}
+      onClick={scrollToTop}
       transition={{ duration: 0.35, ease: "easeInOut", type: "spring" }}
       className="sticky z-30 top-0 h-fit lg:h-[110px] w-full font-inter bg-coral lg:bg-opacity-70 transition-all"
     >

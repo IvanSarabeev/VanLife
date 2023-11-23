@@ -1,6 +1,6 @@
 import React from "react";
-import { VanDataExtended } from "../../types/types";
-import Button from "../../components/HTML/Button";
+import { VanDataExtended } from "types/types";
+import Button from "components/HTML/Button";
 
 type DContentProps = {
   item: VanDataExtended;

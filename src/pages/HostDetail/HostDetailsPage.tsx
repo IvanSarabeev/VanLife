@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { VanDataExtended } from "../../types/types";
+import { VanDataExtended } from "types/types";
+import { fetchVanIdData } from "services/apiService";
 import { useParams, NavLink, Outlet, useOutletContext } from "react-router-dom";
-import { fetchVanIdData } from "../../services/apiService";
-import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
-import Button from "../../components/HTML/Button";
+import Button from "components/HTML/Button";
 import DetailContent from "./DetailContent";
 import OutletNav from "./OutletNav/OutletNav";
+import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 
 type ContextType = { vanDetail: VanDataExtended | null };
 

@@ -123,3 +123,9 @@ export const vanStaff = [
     title: "Marketing Specialist",
   },
 ];
+
+export const navLinks = [
+  { to: "income", title: "Income" },
+  { to: "vans", title: "Vans" },
+  { to: "reviews", title: "Reviews" },
+];

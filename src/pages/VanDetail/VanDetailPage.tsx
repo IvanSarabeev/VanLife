@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { fetchVanIdData } from "../../services/apiService";
-import { VanDataExtended } from "../../types/types";
-import Layout from "../../components/Layouts/Layout";
-import Button from "../../components/HTML/Button";
+import { fetchVanIdData } from "services/apiService";
+import { VanDataExtended } from "types/types";
+import Layout from "components/Layouts/Layout";
+import Button from "components/HTML/Button";
 import ProductDetail from "./Detail/ProductDetail";
 import { ReactComponent as IconSpinner } from "../../assets/svgs/spinner.svg";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../../components/Layouts/Layout";
-import Button from "../../components/HTML/Button";
+import Layout from "components/Layouts/Layout";
+import Button from "components/HTML/Button";
 import Meter from "../../assets/images/meter.png";
 import Polite from "../../assets/images/about.jpg";
 import AboutHero from "../../assets/images/about-hero.jpg";
@@ -9,8 +9,8 @@ import { ReactComponent as IconCheck } from "../../assets/svgs/check.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
 import { partnersLists, showcaseTrip } from "../../constants/data";
 import ProviderBenefits from "./components/Benefits";
-import SubscribeBanner from "../../components/Banner/SubscribeBanner";
 import MeetTeam from "./components/MeetTeam";
+import SubscribeBanner from "components/Banner/SubscribeBanner";
 
 const AboutPage = () => {
   return (

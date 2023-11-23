@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../components/HTML/Button";
+import Button from "components/HTML/Button";
 import { ReactComponent as IconStar } from "../../assets/svgs/star.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
 import HeroImg from "../../assets/images/hero.webp";

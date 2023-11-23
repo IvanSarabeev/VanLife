@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { VanData } from "../../../types/types";
-import { fetchVansData } from "../../../services/apiService";
+import { VanData } from "types/types";
+import { fetchVansData } from "services/apiService";
 import HostList from "./Lists/HostList";
 
 const HostVans = () => {

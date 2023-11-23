@@ -2,12 +2,20 @@ export interface VanData {
   id: string;
   name: string;
   type: string;
+  year: number;
+  fuel: string;
+  model: string;
   price: number;
+  mileage: string;
+  gearType: string;
   imageUrl: string;
 }
 
 export interface VanDataExtended extends VanData {
+  gears: number;
+  engPower: string;
   visiblity: string;
+  consumption: string;
   description: string;
   imgGallery: { id: number; src: string; alt: string }[];
 }

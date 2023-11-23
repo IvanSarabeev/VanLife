@@ -1,5 +1,5 @@
 import React from "react";
-import { VanData } from "../../../../types/types";
+import { VanData } from "types/types";
 import { NavLink } from "react-router-dom";
 
 type HostVanProps = {

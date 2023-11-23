@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../../components/HTML/Button";
+import Button from "components/HTML/Button";
 import { featuresData } from "../../../constants/data";
 import ImgMockup from "../../../assets/images/design.png";
 
