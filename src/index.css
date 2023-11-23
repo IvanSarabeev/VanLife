@@ -24,7 +24,7 @@
   }
 
   .flexProduct-container {
-    @apply flex flex-col items-start justify-start gap-4 xl:gap-6;
+    @apply grid grid-cols-1 lg:grid-cols-2 items-start justify-start gap-4 xl:gap-6;
   }
 
   .max-container {
@@ -91,7 +91,11 @@
     @apply border-[1px] border-solid border-[#EAEAEA];
   }
 
+  .filter-item {
+    @apply h-10 w-10 leading-10 rounded-lg drop-shadow bg-white;
+  }
+
   .filter-btn {
-    @apply h-10 w-10 leading-10 rounded-lg text-center drop-shadow bg-white;
+    @apply w-full h-full flex items-center justify-center rounded-lg hover:bg-light-coral hover:text-white transition-all ease-in-out;
   }
 }

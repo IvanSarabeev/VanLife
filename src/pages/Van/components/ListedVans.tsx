@@ -16,7 +16,7 @@ const VansLists = ({ item }: VansListProps) => {
         <img
           src={item.imageUrl}
           alt={item.name}
-          className="w-96 h-[290px] sm:w-full sm:h-56 rounded-lg aspect-auto object-cover hover:rounded-md overflow-hidden group-hover:rounded-lg transition-all"
+          className="w-96 h-[290px] sm:w-full sm:h-56 rounded-lg aspect-auto object-cover hover:rounded-md overflow-hidden mx-auto group-hover:rounded-lg transition-all"
         />
         <div className="flex flex-col items-start justify-center py-4 px-2">
           <div className="w-full flex items-center justify-between pb-4 text-[#1A3760]">
@@ -30,7 +30,7 @@ const VansLists = ({ item }: VansListProps) => {
           {/* <Button className={`${item.type} text-base lg:text-lg capitalize`}>
           {item.type}
         </Button> */}
-          <div className="pt-5 border-t border-solid border-[#EAEAEA]">
+          <div className="w-full pt-5 border-t border-solid border-[#EAEAEA]">
             <ul className="gap-3 flex items-center justify-start text-xs font-normal capitalize">
               <li className="flex gap-2">
                 <FaRoad height={14} width={16} />

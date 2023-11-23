@@ -50,13 +50,19 @@ const FilterVans = ({
           })}
         </select>
       </li>
-      <li className="filter-btn border-one mr-2">
-        <Button onClick={() => handleLayoutChange("grid")}>
+      <li className="filter-item border-one mr-2">
+        <Button
+          className="filter-btn"
+          onClick={() => handleLayoutChange("grid")}
+        >
           <BsFillGridFill height={20} width={14} />
         </Button>
       </li>
-      <li className="filter-btn border-one">
-        <Button onClick={() => handleLayoutChange("list")}>
+      <li className="filter-item border-one">
+        <Button
+          className="filter-btn"
+          onClick={() => handleLayoutChange("list")}
+        >
           <FaList height={20} width={14} />
         </Button>
       </li>
