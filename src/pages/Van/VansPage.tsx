@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import FilterVans from "./components/FilterVans";
 import GridVans from "./Layouts/GridVans";
 import ListVans from "./Layouts/ListVans";
+import Loader from "components/Loader/Loader";
 
 const VansPage = () => {
   const [van, setVan] = useState<VanData[]>([]);
@@ -78,7 +79,7 @@ const VansPage = () => {
   return (
     <>
       <Layout>
-        <main className="px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 pb-10 bg-coral">
+        <main className="min-h-screen px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 pb-10 bg-coral">
           <h2 className="text-2xl lg:text-4xl font-bold capitalize">
             Featured Listings
           </h2>
@@ -113,7 +114,7 @@ const VansPage = () => {
                 );
               })
             ) : (
-              <p>Loading data</p>
+              <Loader />
             )}
           </section>
         </main>

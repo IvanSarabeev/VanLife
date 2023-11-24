@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { VanData } from "types/types";
 import { fetchVansData } from "services/apiService";
 import HostList from "./Lists/HostList";
+import Loader from "components/Loader/Loader";
 
 const HostVans = () => {
   const [van, setVan] = useState<VanData[]>([]);
@@ -32,7 +33,7 @@ const HostVans = () => {
             return <HostList key={index} item={item} />;
           })
         ) : (
-          <p>Loading data</p>
+          <Loader />
         )}
       </section>
     </>

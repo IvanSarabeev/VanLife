@@ -4,8 +4,8 @@ import { fetchVanIdData } from "services/apiService";
 import { VanDataExtended } from "types/types";
 import Layout from "components/Layouts/Layout";
 import Button from "components/HTML/Button";
+import Loader from "components/Loader/Loader";
 import ProductDetail from "./Detail/ProductDetail";
-import { ReactComponent as IconSpinner } from "../../assets/svgs/spinner.svg";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 
 const VanDetailPage = () => {
@@ -35,7 +35,7 @@ const VanDetailPage = () => {
   return (
     <>
       <Layout>
-        <main className="w-full h-auto pb-0 px-4 md:px-6 lg:px-8 xl:px-10 lg:pb-20 font-inter bg-coral">
+        <main className="w-full min-h-screen pb-0 px-4 md:px-6 lg:px-8 xl:px-10 lg:pb-20 font-inter bg-coral">
           <Button
             type="button"
             className="flex items-center space-x-1 pb-0 lg:pb-6"
@@ -54,10 +54,7 @@ const VanDetailPage = () => {
               <ProductDetail vanInfo={vanInfo} />
             ) : (
               <>
-                <h4 className="text-4xl text-custom-black font-bold font-inter">
-                  <IconSpinner className="fill-blue-600 animate-ping" />
-                  Loading data ..
-                </h4>
+                <Loader />
               </>
             )}
           </section>

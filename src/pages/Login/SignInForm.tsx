@@ -24,7 +24,7 @@ const SignInForm = ({
   return (
     <>
       <Layout>
-        <main className="h-fit xl:min-h-screen w-full flex flex-col items-center justify-center text-black py-6 md:py-8 bg-coral font-inter">
+        <main className="min-h-screen w-full flex flex-col items-center justify-center text-black py-0 md:py-8 bg-coral font-inter">
           {error?.message && (
             <h3 className="text-2xl md:text-3xl font-extrabold text-rose-700 mb-6">
               {error.message}
