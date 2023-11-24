@@ -3,8 +3,6 @@ import {
   Model,
   Response,
   Factory,
-  belongsTo,
-  hasMany,
   RestSerializer,
 } from "miragejs";
 import { User, VanData } from "types/types";

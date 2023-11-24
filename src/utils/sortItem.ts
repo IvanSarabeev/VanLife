@@ -1,26 +1,21 @@
 import { VanData } from "types/types";
+import _ from "lodash";
 
 export const sortedItems = (products: [VanData], sortOptions: string) => {
+  const sortedProducts = _.clone(products);
+
   switch (sortOptions) {
     case "date: newest first": {
-      return products
-        .slice()
-        .sort((yearA, yearB): number => yearB.year - yearA.year);
+      return _.orderBy(sortedProducts, ["year"], ["desc"]);
     }
     case "oldest year": {
-      return products
-        .slice()
-        .sort((yearA, yearB): number => yearA.year - yearB.year);
+      return _.orderBy(sortedProducts, ["year"], ["asc"]);
     }
     case "lowest cost": {
-      return products
-        .slice()
-        .sort((priceOne, priceTwo): number => priceOne.price - priceTwo.price);
+      return _.orderBy(sortedProducts, ["price"], ["asc"]);
     }
     case "highest cost": {
-      return products
-        .slice()
-        .sort((priceOne, priceTwo): number => priceTwo.price - priceOne.price);
+      return _.orderBy(sortedProducts, ["year"], ["desc"]);
     }
     default:
       return products;

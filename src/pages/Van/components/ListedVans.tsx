@@ -11,7 +11,7 @@ type VansListProps = {
 
 const VansLists = ({ item }: VansListProps) => {
   return (
-    <div className="group h-auto mb-6 p-[10px] rounded-lg border-one bg-[#f9f9f9]">
+    <div className="group h-auto mb-6 p rounded-lg border-one bg-[#f9f9f9]">
       <Link to={item.id}>
         <img
           src={item.imageUrl}

@@ -54,13 +54,19 @@ const VansPage = () => {
     setLayout(newLayout);
   };
 
+  const vanLength = van.length;
+
   return (
     <>
       <Layout>
         <main className="px-4 md:px-6 lg:px-8 xl:px-10 pb-10 bg-coral">
-          <h2 className="text-2xl lg:text-[36px] font-bold capitalize">
+          <h2 className="text-2xl lg:text-4xl font-bold capitalize">
             Featured Listings
           </h2>
+          <p className="regular-14 lg:regular-16 text-center lg:text-left mt-3">
+            We found <strong className="text-[#1A3760]">{vanLength}</strong>{" "}
+            vans available for you
+          </p>
           <nav className="flex flex-col sm:flex-row items-center justify-between mb-4">
             <Navigation typeFilter={typeFilter} />
             <FilterVans

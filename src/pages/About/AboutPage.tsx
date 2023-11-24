@@ -115,7 +115,7 @@ const AboutPage = () => {
               </div>
             </div>
           </section>
-          <section className="gap-4 md:gap-6 lg:gap-8 flex flex-col lg:flex-row items-center padding-container max-container py-8 max-w-5xl">
+          <section className="gap-4 md:gap-6 lg:gap-8 flex flex-col-reverse lg:flex-row items-center padding-container max-container py-8 max-w-5xl">
             <img
               src="https://images.prismic.io/indiecampers-demo/aba40e74-c8fd-4dcc-8590-76098cdd2b6d_IndieCampersSSDSC07995.jpg?auto=compress,format&rect=0,0,4980,3320&w=1200&h=800"
               alt="the-cruiser"
@@ -123,7 +123,7 @@ const AboutPage = () => {
               loading="lazy"
               className="relative w-[490px] h-fit rounded-2xl aspect-auto object-cover object-center"
             />
-            <div className="relative gap-2 flex flex-col items-start justify-center">
+            <div className="w-full relative gap-2 flex flex-col items-center justify-center mx-auto">
               <div className="relative ml-0 lg:-ml-28 -mt-16 lg:mt-0 pt-8 lg:pr-0 px-6 lg:pl-5 pb-5 text-left rounded-3xl bg-coral">
                 <p className="regular-16 text-[#FF8C38] mb-1 uppercase">
                   Your trusted partner
@@ -151,7 +151,7 @@ const AboutPage = () => {
                   })}
                 </ul>
               </div>
-              <Link to="/vans" className="remove-outline">
+              <Link to="/vans" className="w-full remove-outline">
                 <Button type="button" className="primary-btn">
                   Chose van &rarr;
                 </Button>
