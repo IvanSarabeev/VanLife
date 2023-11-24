@@ -7,22 +7,22 @@ import { GiGearStickPattern } from "react-icons/gi";
 import { FaStar } from "react-icons/fa";
 import Button from "components/HTML/Button";
 
-type VansListProps = {
+type ListVansProps = {
   item: VanData;
 };
 
-const VansLists = ({ item }: VansListProps) => {
+const ListVans = ({ item }: ListVansProps) => {
   return (
-    <div className="group h-auto mb-6 p rounded-xl border-one bg-[#f9f9f9]">
-      <Link to={item.id}>
-        <div className="p-2">
+    <Link to={item.id}>
+      <div className="group h-auto gap-y-0 md:gap-y-6 flex flex-col md:flex-row items-center justify-start rounded-xl border-one bg-[#f9f9f9]">
+        <div className="relative p-2 xl:p-4 2xl:p-6">
           <img
             src={item.imageUrl}
             alt={item.name}
-            className="w-96 h-[290px] sm:w-full sm:h-56 rounded-md aspect-auto object-cover mx-auto"
+            className="w-96 h-[290px] sm:w-[480px] sm:h-[360px] rounded-md aspect-auto object-cover object-center mx-auto"
           />
         </div>
-        <div className="flex flex-col items-start justify-center py-4 px-2">
+        <div className="w-full flex flex-col items-start justify-between md:justify-center p-4">
           <div className="w-full flex items-center justify-between text-[#1A3760]">
             <h4 className="regular-14 font-semibold overflow-hidden truncate">
               {item.model} - {item.year}
@@ -33,8 +33,8 @@ const VansLists = ({ item }: VansListProps) => {
           </div>
           <div className="w-full flex items-center justify-between text-xs py-2">
             <p>
-              Category:
-              <Button className={`regular-14 capitalize`}> {item.type}</Button>
+              <strong>Category:</strong>{" "}
+              <Button className="regular-14 capitalize"> {item.type}</Button>
             </p>
             <span className="gap-1 flex items-center justify-center">
               {[...Array(5)].map((item, index) => {
@@ -49,6 +49,11 @@ const VansLists = ({ item }: VansListProps) => {
               })}
               <p className="text-[#1A3760] regular-14">({item.star})</p>
             </span>
+          </div>
+          <div className="text-xs text-justify">
+            <p>
+              <strong>Description: </strong> {item.description}
+            </p>
           </div>
           <div className="w-full pt-5 border-t border-solid border-[#EAEAEA]">
             <ul className="gap-3 flex items-center justify-start text-xs font-normal capitalize">
@@ -67,9 +72,9 @@ const VansLists = ({ item }: VansListProps) => {
             </ul>
           </div>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 
-export default VansLists;
+export default ListVans;

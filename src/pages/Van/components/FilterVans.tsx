@@ -11,12 +11,14 @@ type FilterProps = {
     setSortOption: React.Dispatch<React.SetStateAction<string>>
   ) => Promise<void>;
   handleLayoutChange: (newLayout: string) => void;
+  layout: string;
 };
 
 const FilterVans = ({
   handleFetch,
   handleSortChange,
   handleLayoutChange,
+  layout,
 }: FilterProps) => {
   const [sortOption, setSortOption] = useState("date: newest first");
 
@@ -26,7 +28,7 @@ const FilterVans = ({
   };
 
   return (
-    <ul className="flex items-center justify-end text-[#1A3760]">
+    <ul className="w-fit flex items-center justify-end text-[#1A3760]">
       <li className="mr-2.5">
         <label htmlFor="select">Sort by:</label>
       </li>
@@ -52,16 +54,16 @@ const FilterVans = ({
       </li>
       <li className="hidden md:flex filter-item border-one mr-2">
         <Button
-          className="filter-btn"
           onClick={() => handleLayoutChange("grid")}
+          className={`filter-btn ${layout === "grid" ? "bg-light-coral" : ""}`}
         >
           <BsFillGridFill height={20} width={14} />
         </Button>
       </li>
       <li className="hidden md:flex filter-item border-one">
         <Button
-          className="filter-btn"
           onClick={() => handleLayoutChange("list")}
+          className={`filter-btn ${layout === "list" ? "bg-light-coral" : ""}`}
         >
           <FaList height={20} width={14} />
         </Button>

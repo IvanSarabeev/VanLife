@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
-import Layout from "components/Layouts/Layout";
 import { VanData } from "types/types";
+import { sortedItems } from "utils/sortItem";
 import { fetchVansData } from "services/apiService";
-import ListedVans from "./components/ListedVans";
+import Layout from "components/Layouts/Layout";
 import Navigation from "./components/Navigation";
 import FilterVans from "./components/FilterVans";
-import { sortedItems } from "utils/sortItem";
+import GridVans from "./components/Layouts/GridVans";
+import ListVans from "./components/Layouts/ListVans";
 
 const VansPage = () => {
   const [van, setVan] = useState<VanData[]>([]);
@@ -56,10 +57,22 @@ const VansPage = () => {
 
   const vanLength = van.length;
 
+  // const handleSortFilter = () => {
+  //   const updatedSearchParams: { type?: string } = {};
+
+  //   if (typeFilter !== null) {
+  //     updatedSearchParams.type = typeFilter;
+  //   }
+
+  //   setSearchParams(updatedSearchParams);
+  //   setSortBy("newest");
+  //   handleToggle(!on);
+  // };
+
   return (
     <>
       <Layout>
-        <main className="px-4 md:px-6 lg:px-8 xl:px-10 pb-10 bg-coral">
+        <main className="px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 pb-10 bg-coral">
           <h2 className="text-2xl lg:text-4xl font-bold capitalize">
             Featured Listings
           </h2>
@@ -67,9 +80,10 @@ const VansPage = () => {
             We found <strong className="text-[#1A3760]">{vanLength}</strong>{" "}
             vans available for you
           </p>
-          <nav className="flex flex-col sm:flex-row items-center justify-between mb-4">
+          <nav className="flex flex-col-reverse sm:flex-row items-center justify-between mt-4 md:mt-0 md:mb-4">
             <Navigation typeFilter={typeFilter} />
             <FilterVans
+              layout={layout}
               handleFetch={handleFetch}
               handleSortChange={handleSortChange}
               handleLayoutChange={handleLayoutChange}
@@ -82,7 +96,8 @@ const VansPage = () => {
           >
             {van.length > 0 ? (
               displayedVans.map((item, index) => {
-                return <ListedVans key={index} item={item} />;
+                // return <GridVans key={index} item={item} />;
+                return <ListVans key={index} item={item} />;
               })
             ) : (
               <p>Loading data</p>

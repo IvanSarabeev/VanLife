@@ -10,6 +10,7 @@ export interface VanData {
   mileage: string;
   gearType: string;
   imageUrl: string;
+  description?: string;
 }
 
 export interface VanDataExtended extends VanData {
@@ -18,7 +19,6 @@ export interface VanDataExtended extends VanData {
   engPower: string;
   visiblity: string;
   consumption: string;
-  description: string;
   imgGallery: { id: number; src: string; alt: string }[];
 }
 
