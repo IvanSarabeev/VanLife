@@ -6,14 +6,16 @@ import { fetchVansData } from "services/apiService";
 import Layout from "components/Layouts/Layout";
 import Navigation from "./components/Navigation";
 import FilterVans from "./components/FilterVans";
-import GridVans from "./components/Layouts/GridVans";
-import ListVans from "./components/Layouts/ListVans";
+import GridVans from "./Layouts/GridVans";
+import ListVans from "./Layouts/ListVans";
 
 const VansPage = () => {
   const [van, setVan] = useState<VanData[]>([]);
   const [sortBy, setSortBy] = useState<string>("newest");
   const [searchParams, setSearchParams] = useSearchParams();
-  const [layout, setLayout] = useState<string>("grid");
+  const [layout, setLayout] = useState<string>(() => {
+    return localStorage.getItem("layout") || "grid";
+  });
 
   const typeFilter = searchParams.get("type");
 
@@ -47,13 +49,17 @@ const VansPage = () => {
     setSortBy(selectedOption.replace(/-/g, " "));
   };
 
+  const handleLayoutChange = (newLayout: string) => {
+    setLayout(newLayout);
+  };
+
   useEffect(() => {
     handleFetch();
   }, [handleFetch]);
 
-  const handleLayoutChange = (newLayout: string) => {
-    setLayout(newLayout);
-  };
+  useEffect(() => {
+    localStorage.setItem("layout", layout);
+  }, [layout]);
 
   const vanLength = van.length;
 
