@@ -91,13 +91,20 @@ const VansPage = () => {
           </nav>
           <section
             className={`${
-              layout === "grid" ? "product-container" : "flexProduct-container"
+              layout === "grid" ? "grid-container" : "flex-container"
             } selection:bg-[#1A3760] selection:text-white selection:drop-shadow-none`}
           >
             {van.length > 0 ? (
               displayedVans.map((item, index) => {
-                // return <GridVans key={index} item={item} />;
-                return <ListVans key={index} item={item} />;
+                return (
+                  <>
+                    {layout === "grid" ? (
+                      <GridVans key={index} item={item} />
+                    ) : (
+                      <ListVans key={index} item={item} />
+                    )}
+                  </>
+                );
               })
             ) : (
               <p>Loading data</p>

@@ -32,10 +32,12 @@ const GridVans = ({ item }: GridVansProps) => {
             </p>
           </div>
           <div className="w-full flex items-center justify-between text-xs py-2">
-            <p>
-              Category:
-              <Button className={`regular-14 capitalize`}> {item.type}</Button>
-            </p>
+            <span>
+              <strong>Category:</strong>{" "}
+              <Button type="button" className={`regular-14 capitalize`}>
+                {item.type}
+              </Button>
+            </span>
             <span className="gap-1 flex items-center justify-center">
               {[...Array(5)].map((item, index) => {
                 return (
@@ -52,15 +54,15 @@ const GridVans = ({ item }: GridVansProps) => {
           </div>
           <div className="w-full pt-5 border-t border-solid border-[#EAEAEA]">
             <ul className="gap-3 flex items-center justify-start text-xs font-normal capitalize">
-              <li className="flex gap-2">
+              <li className="flex gap-2 items-center justify-center">
                 <FaRoad height={14} width={16} />
                 {item.mileage}
               </li>
-              <li className="flex gap-2 ">
+              <li className="flex gap-2 items-center justify-center">
                 <BsFillFuelPumpFill height={14} width={16} />
                 {item.fuel}
               </li>
-              <li className="flex gap-2">
+              <li className="flex gap-2 items-center justify-center">
                 <GiGearStickPattern height={14} width={16} />
                 {item.gearType}
               </li>
