@@ -1,6 +1,7 @@
 export interface VanData {
   id: string;
   name: string;
+  star: string;
   type: string;
   year: number;
   fuel: string;

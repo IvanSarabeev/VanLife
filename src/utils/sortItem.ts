@@ -8,13 +8,13 @@ export const sortedItems = (products: [VanData], sortOptions: string) => {
     case "date: newest first": {
       return _.orderBy(sortedProducts, ["year"], ["desc"]);
     }
-    case "oldest year": {
+    case "date: oldest year": {
       return _.orderBy(sortedProducts, ["year"], ["asc"]);
     }
-    case "lowest cost": {
+    case "price: lowest cost": {
       return _.orderBy(sortedProducts, ["price"], ["asc"]);
     }
-    case "highest cost": {
+    case "price: highest cost": {
       return _.orderBy(sortedProducts, ["year"], ["desc"]);
     }
     default:

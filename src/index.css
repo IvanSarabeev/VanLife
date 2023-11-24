@@ -98,4 +98,16 @@
   .filter-btn {
     @apply w-full h-full flex items-center justify-center rounded-lg hover:bg-light-coral hover:text-white transition-all ease-in-out;
   }
+
+  .simple {
+    @apply bg-[#e17654];
+  }
+
+  .luxury {
+    @apply bg-[#161616];
+  }
+
+  .rugged {
+    @apply bg-[#115e59];
+  }
 }

@@ -23,6 +23,7 @@ createServer({
       id: "Default id",
       type: "Default Type",
       name: "Default Name",
+      star: "Default Star",
       year: 2022,
       price: 0,
       fuel: "Default Fuel",
@@ -41,6 +42,7 @@ createServer({
     server.create("van", {
       id: "1",
       name: "Modest Explorer",
+      star: "4.3",
       year: 2007,
       fuel: "petrol",
       model: "Volkswagen Buzz 1.9",
@@ -62,6 +64,7 @@ createServer({
     server.create("van", {
       id: "2",
       name: "Marco Polo",
+      star: "4.7",
       year: 2021,
       fuel: "diesel",
       model: "Marco Polo 300D 2.0",
@@ -104,6 +107,7 @@ createServer({
     server.create("van", {
       id: "3",
       name: "Reliable Red",
+      star: "4.3",
       year: 2009,
       fuel: "petrol",
       model: "Volkswagen Buzz 2.0",
@@ -146,6 +150,7 @@ createServer({
     server.create("van", {
       id: "4",
       name: "Dreamfinder",
+      star: "4.5",
       year: 2006,
       fuel: "petrol",
       model: "Volkswagen Buzz 1.8",
@@ -188,6 +193,7 @@ createServer({
     server.create("van", {
       id: "5",
       name: "The Cruiser",
+      star: "4.9",
       year: 2020,
       fuel: "diesel",
       model: "Mercedec Sprinter",
@@ -230,6 +236,7 @@ createServer({
     server.create("van", {
       id: "6",
       name: "Green Wonder",
+      star: "4.7",
       year: 2008,
       fuel: "petrol",
       model: "Volkswagen Buzz",
@@ -272,6 +279,7 @@ createServer({
     server.create("van", {
       id: "7",
       name: "Green Peace",
+      star: "4.5",
       year: 2017,
       fuel: "diesel",
       model: "Renoult Rx 47",
@@ -314,6 +322,7 @@ createServer({
     server.create("van", {
       id: "8",
       name: "Wrangler",
+      star: "5",
       year: 2022,
       fuel: "petrol",
       model: "Jeep Wrangler Scout",
