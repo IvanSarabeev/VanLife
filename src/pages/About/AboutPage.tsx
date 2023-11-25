@@ -16,8 +16,8 @@ const AboutPage = () => {
   return (
     <>
       <Layout>
-        <main className="w-full min-h-screen relative overflow-hidden flexCenter flex-col font-inter bg-coral">
-          <section className="flexCenter flex-col lg:flex-row gap-10  py-10 xl:py-20 max-container padding-container">
+        <main className="w-full min-h-screen relative overflow-hidden flexCenter flex-col font-inter padding-container bg-coral">
+          <section className="flexCenter flex-col lg:flex-row gap-10 py-10 xl:py-20 max-container">
             <article className="w-full lg:w-8/12 flex flex-wrap flex-col items-start justify-start max-container">
               <p className="regular-18 text-dark-coral mb-1.5 uppercase">
                 We think for you
@@ -60,7 +60,7 @@ const AboutPage = () => {
             </aside>
           </section>
           <section className="max-container flexCenter flex-col">
-            <aside className="w-full max-container padding-container pb-20">
+            <aside className="w-full pb-20">
               <p className="regular-18 text-[#FF8C38] -mt-1 mb-3 uppercase">
                 We are here for you
               </p>
@@ -68,7 +68,7 @@ const AboutPage = () => {
                 <h3 className="text-[40px] lg:text-[64px] heading-attr xl:max-w-[640px]">
                   We Guide You throught Everything
                 </h3>
-                <p className="xl:max-w-xl regular-16">
+                <p className="xl:max-w-xl 2xl:max-w-2xl 2xl:indent-1 first-letter:regular-18 regular-16">
                   Only with the hilink application you will no longer get lost
                   and get lost again, because we already support offline maps
                   when there is no internet connection in the field. Invite your

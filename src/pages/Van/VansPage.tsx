@@ -79,7 +79,7 @@ const VansPage = () => {
   return (
     <>
       <Layout>
-        <main className="min-h-screen px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12 pb-10 bg-coral">
+        <main className="min-h-screen padding-container pb-10 bg-coral">
           <h2 className="text-2xl lg:text-4xl font-bold capitalize">
             Featured Listings
           </h2>

@@ -2,6 +2,7 @@ import React from "react";
 // import Button from "components/HTML/Button";
 import { VanDataExtended } from "types/types";
 import ImgCollection from "./ImgCollection";
+import Overview from "./Overview";
 
 type SingleVanProps = {
   vanInfo: VanDataExtended;
@@ -23,6 +24,9 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
       <div className="gap-5 flex items-center justify-center">
         <ImgCollection vanInfo={vanInfo} />
       </div>
+      <article className="flex flex-col items-start justify-between p-6 border-one rounded-lg">
+        <Overview vanInfo={vanInfo} />
+      </article>
     </div>
   );
 };
