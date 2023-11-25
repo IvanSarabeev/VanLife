@@ -36,9 +36,9 @@ const Header = () => {
       animate={hidden ? "block" : "visible"}
       onClick={scrollToTop}
       transition={{ duration: 0.35, ease: "easeInOut", type: "spring" }}
-      className="sticky z-30 top-0 h-fit lg:h-[110px] w-full font-inter bg-coral lg:bg-opacity-70 transition-all"
+      className="sticky z-30 top-0 h-fit lg:h-[110px] w-full font-inter padding-container bg-coral lg:bg-opacity-70 transition-all"
     >
-      <nav className="md:flex flex-row items-center justify-between p-4 md:p-6 lg:p-8">
+      <nav className="md:flex flex-row items-center justify-between py-4 md:py-6 lg:py-8">
         <h2 className="text-2xl lg:text-[28px] lg:leading-10 font-black text-[#252525] uppercase">
           <NavLink to="/">#vanlife</NavLink>
         </h2>
