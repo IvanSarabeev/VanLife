@@ -110,4 +110,8 @@
   .rugged {
     @apply bg-[#115e59];
   }
+
+  .prev-next-btns {
+    @apply w-12 h-12 flex items-center justify-center rounded-full bg-opacity-40 bg-[#0c1227] hover:bg-[#0A2357] hover:text-white transition-all ease-in-out;
+  }
 }

@@ -5,8 +5,9 @@ import { VanDataExtended } from "types/types";
 import Layout from "components/Layouts/Layout";
 import Button from "components/HTML/Button";
 import Loader from "components/Loader/Loader";
-import ProductDetail from "./Detail/ProductDetail";
+// import ProductDetail from "./Detail/ProductDetail";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
+import ProductShowcase from "./components/ProductShowcase";
 
 const VanDetailPage = () => {
   const { id } = useParams();
@@ -16,12 +17,10 @@ const VanDetailPage = () => {
   useEffect(() => {
     const handleVanIdFetch = async () => {
       if (id) {
-        //check if there is any id
         try {
           const data = await fetchVanIdData(id);
           if (data) {
-            //if data is not empty
-            setVanInfo(data.van); //set the state to the coresponding van
+            setVanInfo(data.van);
           }
         } catch (error) {
           console.error(error);
@@ -35,7 +34,7 @@ const VanDetailPage = () => {
   return (
     <>
       <Layout>
-        <main className="w-full min-h-screen pb-0 px-4 md:px-6 lg:px-8 xl:px-10 lg:pb-20 font-inter bg-coral">
+        <main className="w-full min-h-screen font-inter padding-container bg-coral">
           <Button
             type="button"
             className="flex items-center space-x-1 pb-0 lg:pb-6"
@@ -49,9 +48,9 @@ const VanDetailPage = () => {
               Back to all vans
             </Link>
           </Button>
-          <section className="h-screen lg:h-auto w-full flex items-center justify-center">
+          <section className="w-full h-full flex flex-col items-center justify-center">
             {vanInfo !== null ? (
-              <ProductDetail vanInfo={vanInfo} />
+              <ProductShowcase vanInfo={vanInfo} />
             ) : (
               <>
                 <Loader />
