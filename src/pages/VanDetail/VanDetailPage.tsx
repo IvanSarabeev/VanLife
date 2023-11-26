@@ -48,7 +48,7 @@ const VanDetailPage = () => {
               Back to all vans
             </Link>
           </Button>
-          <section className="w-full h-full flex flex-col items-center justify-center">
+          <section className="w-full min-h-screen flex flex-col max-container">
             {vanInfo !== null ? (
               <ProductShowcase vanInfo={vanInfo} />
             ) : (

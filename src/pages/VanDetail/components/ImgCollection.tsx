@@ -19,21 +19,21 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
   };
 
   return (
-    <span className="w-full gap-2.5 flex flex-col">
+    <span className="w-full h-fit gap-2.5 flex flex-col">
       <motion.div
         key={currentIndex}
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative z-10"
+        className="relative z-10 w-fit h-fit"
       >
         <img
           src={vanInfo.imgGallery[currentIndex].src}
           alt={vanInfo.imgGallery[currentIndex].alt}
           loading="lazy"
           decoding="async"
-          className="group w-full h-full max-w-lg rounded-lg aspect-auto object-cover object-center transition-all ease-in-out scale-95 hover:scale-100"
+          className="group w-full h-full max-w-2xl rounded-lg aspect-auto object-cover object-center transition-all ease-in-out scale-95 hover:scale-100 hover:rounded-xl"
         />
         <Button
           type="button"
@@ -58,7 +58,7 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
           </Button>
         </span>
       </motion.div>
-      <div className="w-full gap-2.5 px-4 flex flex-wrap items-center">
+      <div className="w-full gap-2.5 px-2 lg:px-4 xl:px-6 2xl:px-8 flex flex-wrap items-center">
         {vanInfo.imgGallery.map((imgSrc, index) => {
           return (
             <motion.img
@@ -69,8 +69,8 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
               loading="lazy"
               onClick={() => setCurrentIndex(index)}
               className={`${
-                index === currentIndex ? "h-24 w-fit opacity-100" : ""
-              }h-24 w-fit rounded-md opacity-60 object-cover object-center aspect-square cursor-pointer hover:opacity-100`}
+                index === currentIndex ? "h-20 xl:h-24 w-fit opacity-100" : ""
+              } h-20 xl:h-24 w-fit rounded-md opacity-60 object-cover object-center aspect-square cursor-pointer hover:opacity-100`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
