@@ -26,7 +26,7 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
           ${vanInfo.price} <strong className="text-gray-500/90">/day</strong>
         </h4>
       </span>
-      <div className="w-full max-w-7xl gap-5 flex flex-col lg:flex-row items-center justify-center">
+      <div className="w-full gap-5 flex flex-col lg:flex-row items-center justify-center">
         <ImgCollection vanInfo={vanInfo} />
         <aside className="w-full max-w-sm gap-y-2.5 xl:gap-y-3.5 flex flex-col items-end justify-end regular-14 xl:regular-16">
           <ScheduleForm />

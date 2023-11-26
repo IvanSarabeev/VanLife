@@ -2,6 +2,7 @@ import React from "react";
 import Button from "components/HTML/Button";
 import { BiSolidOffer } from "react-icons/bi";
 import { AiOutlineSchedule } from "react-icons/ai";
+import Input from "components/HTML/Input";
 
 const ScheduleForm = () => {
   return (
@@ -20,6 +21,43 @@ const ScheduleForm = () => {
         <AiOutlineSchedule height={21} width={18} />
         Schedule an Trip
       </Button>
+      <div className="w-full flex flex-col items-start justify-center p-5 border-one rounded-lg bg-white">
+        <h4 className="regular-16 xl:regular-18 font-semibold text-[#1A3760] mb-5">
+          Contact Us
+        </h4>
+        <form
+          action="#"
+          className="gap-y-5 w-full flex flex-col items-start justify-center"
+        >
+          <Input
+            type="text"
+            placeholder=""
+            required={true}
+            // value=""
+            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+          />
+          <Input
+            type="email"
+            placeholder=""
+            required={true}
+            // value=""
+            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+          />
+          <Input
+            type="password"
+            placeholder=""
+            required={true}
+            // value=""
+            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+          />
+          <Button className="w-full h-12 regular-14 font-semibold rounded-lg text-[#1A3760] bg-[#F5C34B] transition-all ease-in-out hover:text-white hover:bg-[#E6AA1B]">
+            Send Message
+          </Button>
+          <Button className="w-full h-12 regular-14 font-semibold rounded-lg text-white bg-[#28A745] transition-all ease-in-out">
+            + 359 981 731
+          </Button>
+        </form>
+      </div>
     </>
   );
 };
