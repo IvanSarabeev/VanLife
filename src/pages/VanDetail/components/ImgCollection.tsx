@@ -58,7 +58,7 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
           </Button>
         </span>
       </motion.div>
-      <div className="w-full gap-2.5 px-2 lg:px-4 xl:px-6 2xl:px-8 flex flex-wrap items-center xl:justify-center">
+      <div className="w-full gap-2.5 px-2 lg:px-4 xl:px-6 2xl:px-8 flex flex-wrap items-center justify-center">
         {vanInfo.imgGallery.map((imgSrc, index) => {
           return (
             <motion.img

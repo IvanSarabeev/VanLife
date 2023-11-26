@@ -28,7 +28,7 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
       </span>
       <div className="w-full gap-5 flex flex-col lg:flex-row items-center justify-center">
         <ImgCollection vanInfo={vanInfo} />
-        <aside className="w-full max-w-sm gap-y-2.5 xl:gap-y-3.5 flex flex-col items-end justify-end regular-14 xl:regular-16">
+        <aside className="w-full sm:w-3/4 lg:max-w-sm gap-y-2.5 xl:gap-y-3.5 flex flex-col items-end justify-end regular-14 xl:regular-16">
           <ScheduleForm />
         </aside>
       </div>

@@ -31,21 +31,21 @@ const ScheduleForm = () => {
         >
           <Input
             type="text"
-            placeholder=""
+            placeholder="Name"
+            required={true}
+            // value=""
+            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+          />
+          <Input
+            type="text"
+            placeholder="Phone"
             required={true}
             // value=""
             className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
           />
           <Input
             type="email"
-            placeholder=""
-            required={true}
-            // value=""
-            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
-          />
-          <Input
-            type="password"
-            placeholder=""
+            placeholder="Email"
             required={true}
             // value=""
             className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
