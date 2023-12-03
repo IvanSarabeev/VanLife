@@ -1,10 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { VanData } from "types/types";
-import { FaRoad } from "react-icons/fa";
+import { FaRoad, FaStar } from "react-icons/fa";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import { GiGearStickPattern } from "react-icons/gi";
-import { FaStar } from "react-icons/fa";
 import Button from "components/HTML/Button";
 
 type ListVansProps = {
@@ -82,4 +81,4 @@ const ListVans = ({ item }: ListVansProps) => {
   );
 };
 
-export default ListVans;
+export default memo(ListVans);

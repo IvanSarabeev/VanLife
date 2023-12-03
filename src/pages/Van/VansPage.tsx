@@ -64,18 +64,6 @@ const VansPage = () => {
 
   const vanLength = van.length;
 
-  // const handleSortFilter = () => {
-  //   const updatedSearchParams: { type?: string } = {};
-
-  //   if (typeFilter !== null) {
-  //     updatedSearchParams.type = typeFilter;
-  //   }
-
-  //   setSearchParams(updatedSearchParams);
-  //   setSortBy("newest");
-  //   handleToggle(!on);
-  // };
-
   return (
     <>
       <Layout>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Button from "components/HTML/Button";
 import { FaList } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
@@ -22,10 +22,13 @@ const FilterVans = ({
 }: FilterProps) => {
   const [sortOption, setSortOption] = useState("date: newest first");
 
-  const handleSortSelect = async (e: React.ChangeEvent<HTMLSelectElement>) => {
-    handleSortChange(e, setSortOption);
-    handleFetch();
-  };
+  const handleSortSelect = useCallback(
+    async (e: React.ChangeEvent<HTMLSelectElement>) => {
+      handleSortChange(e, setSortOption);
+      handleFetch();
+    },
+    [handleSortChange, handleFetch]
+  );
 
   return (
     <ul className="w-fit flex items-center justify-end text-[#1A3760]">
