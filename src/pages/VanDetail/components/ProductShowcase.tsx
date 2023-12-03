@@ -1,10 +1,10 @@
 import React from "react";
 import { VanDataExtended } from "types/types";
 import ImgCollection from "./ImgCollection";
-import ScheduleForm from "./ScheduleForm";
-import Overview from "./Overview";
-import Description from "./Description";
-import Location from "./Location";
+import ScheduleForm from "./Form/ScheduleForm";
+import Overview from "./Content/Overview";
+import Description from "./Content/Description";
+import Location from "./Content/Location";
 
 type SingleVanProps = {
   vanInfo: VanDataExtended;
@@ -36,10 +36,14 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
         <div className="w-full lg:w-2/4 flex flex-col items-start justify-start border-one rounded-lg bg-white p-6">
           <Overview vanInfo={vanInfo} />
         </div>
-        <div className="w-full lg:w-2/4 flex flex-col items-start justify-start border-one rounded-lg bg-white p-6">
-          <Description vanInfo={vanInfo} />
-          <Location />
-        </div>
+        <aside className="w-full gap-2 lg:w-2/4 flex flex-col items-start justify-start">
+          <div className="border-one rounded-lg p-6 bg-white">
+            <Description vanInfo={vanInfo} />
+          </div>
+          {/* <div className="border-one rounded-lg p-6 bg-white">
+            <Location />
+          </div> */}
+        </aside>
       </article>
     </div>
   );

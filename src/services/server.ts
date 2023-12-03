@@ -49,8 +49,8 @@ createServer({
       gears: "6",
       gearType: "handle",
       mileage: "94,495",
-      consumption: "",
-      engPower: "",
+      consumption: "depends",
+      engPower: "120 Hp",
       price: 60,
       description:
         "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
@@ -71,7 +71,7 @@ createServer({
       gears: "8",
       gearType: "automatic",
       mileage: "38,231",
-      consumption: "",
+      consumption: "8,4/100 mls",
       engPower: "239 Hp",
       price: 80,
       description:
@@ -114,8 +114,8 @@ createServer({
       gears: "7",
       gearType: "handle",
       mileage: "77,124",
-      consumption: "",
-      engPower: "",
+      consumption: "9,2/ 100 mls",
+      engPower: "140 Hp",
       price: 100,
       description:
         "Reliable Red is a van that was made for travelling. The inside is comfortable and cozy, with plenty of space to stretch out in. There's a small kitchen, so you can cook if you need to. You'll feel like home as soon as you step out of it.",
@@ -157,8 +157,8 @@ createServer({
       gears: "6",
       gearType: "handle",
       mileage: "108,294",
-      consumption: "",
-      engPower: "",
+      consumption: "depends",
+      engPower: "124 Hp",
       price: 65,
       description:
         "Dreamfinder is the perfect van to travel in and experience. With a ceiling height of 2.1m, you can stand up in this van and there is great head room. The floor is a beautiful glass-reinforced plastic (GRP) which is easy to clean and very hard wearing. A large rear window and large side windows make it really light inside and keep it well ventilated.",
@@ -200,8 +200,8 @@ createServer({
       gears: "9",
       gearType: "automatic",
       mileage: "24,982",
-      consumption: "",
-      engPower: "",
+      consumption: "7,7/ 100 mls",
+      engPower: "172 Hp",
       price: 120,
       description:
         "The Cruiser is a van for those who love to travel in comfort and luxury. With its many windows, spacious interior and ample storage space, the Cruiser offers a beautiful view wherever you go.",
@@ -243,8 +243,8 @@ createServer({
       gears: "",
       gearType: "handle",
       mileage: "110,248",
-      consumption: "",
-      engPower: "",
+      consumption: "depends",
+      engPower: "130 Hp",
       price: 70,
       description:
         "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
@@ -286,8 +286,8 @@ createServer({
       gears: "8",
       gearType: "automatic",
       mileage: "47,628",
-      consumption: "",
-      engPower: "",
+      consumption: "9/ 100",
+      engPower: "180 Hp",
       price: 95,
       description:
         "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
@@ -386,9 +386,7 @@ createServer({
       let vans = schema.all("van");
 
       if (sortBy) {
-        // Sorting the models directly without using an external library
         vans.models = vans.models.sort((a, b): any => {
-          // Assuming sortBy is a valid property name in VanData
           const aValue = (a as any)[sortBy];
           const bValue = (b as any)[sortBy];
 
