@@ -1,21 +1,22 @@
 import { VanData } from "types/types";
-import _ from "lodash";
+import _clone from "lodash/clone";
+import _OrderBy from "lodash/orderBy";
 
 export const sortedItems = (products: [VanData], sortOptions: string) => {
-  const sortedProducts = _.clone(products);
+  const sortedProducts = _clone(products);
 
   switch (sortOptions) {
     case "date: newest first": {
-      return _.orderBy(sortedProducts, ["year"], ["desc"]);
+      return _OrderBy(sortedProducts, ["year"], ["desc"]);
     }
     case "date: oldest year": {
-      return _.orderBy(sortedProducts, ["year"], ["asc"]);
+      return _OrderBy(sortedProducts, ["year"], ["asc"]);
     }
     case "price: lowest cost": {
-      return _.orderBy(sortedProducts, ["price"], ["asc"]);
+      return _OrderBy(sortedProducts, ["price"], ["asc"]);
     }
     case "price: highest cost": {
-      return _.orderBy(sortedProducts, ["year"], ["desc"]);
+      return _OrderBy(sortedProducts, ["price"], ["desc"]);
     }
     default:
       return products;
