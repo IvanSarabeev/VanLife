@@ -45,9 +45,9 @@ const Header = () => {
         <Button
           type="button"
           onClick={() => handleToggle()}
-          className="flex md:hidden absolute top-3.5 right-5 p-1 rounded bg-light-coral transition-all ease-in-out"
+          className="flex md:hidden absolute top-3.5 right-5 p-1 rounded bg-gray-300/50 border-one transition-all ease-in-out"
         >
-          {show ? <IconXMark /> : <IconHamburger />}
+          {show ? <IconXMark height={24} width={24} className="text-red-500"/> : <IconHamburger  height={24} width={24}/>}
         </Button>
         <nav className="hidden w-full md:flex items-end justify-end regular-14 sm:regular-16 lg:regular-18">
           <ul className="flex items-center space-x-4">

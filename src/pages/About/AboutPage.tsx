@@ -48,10 +48,10 @@ const AboutPage = () => {
               </Button>
             </div>
           </section>
-          <section className="flexCenter flex-col padding-container max-container py-8">
-            <h3 className="text-2xl md:text-3xl xl:text-4xl text-custom-black text-center font-bold py-4">
+          <section className="flexCenter flex-col lg:padding-container max-container py-8">
+            {/* <h3 className="text-2xl md:text-3xl xl:text-4xl text-custom-black text-center font-bold py-4">
               Nº 1 road trip provider in Europe
-            </h3>
+            </h3> */}
             <aside className="gap-4 lg:gap-0 flex flex-wrap lg:flex-nowrap items-center justify-center my-8 bg-transparent">
               {showcaseTrip.map((item, index) => {
                 const Icon = item.icon;
@@ -161,7 +161,7 @@ const AboutPage = () => {
           <section className="gap-6 flex flex-col items-center justify-center py-10 max-container padding-container">
             <MeetTeam />
           </section>
-          <section className="py-10 max-container">
+          <section className="hidden md:flex py-10 max-container">
             <SubscribeBanner />
           </section>
         </main>

@@ -8,11 +8,11 @@
 
 @layer components {
   .active-nav {
-    @apply pr-7 text-custom-black font-bold hover:text-[#FF8C38] underline;
+    @apply pr-4 lg:pr-7 text-custom-black font-bold hover:text-[#FF8C38] underline;
   }
 
   .passive-nav {
-    @apply font-medium pr-7 hover:underline hover:font-semibold transition-all;
+    @apply font-medium pr-4 lg:pr-7 hover:underline hover:font-semibold transition-all;
   }
 
   .form-inputs {

@@ -44,14 +44,15 @@ const Testimonial = () => {
         onMouseDown={onMouseStart}
         onTouchMove={onTouchMove}
         onTouchStart={onTouchStart}
-        className="relative min-w-full py-4 mb-0 md:mb-4 lg:mb-6 xl:mb-8 max-container touch-pan-x overflow-x-auto focus:touch-pan-right"
+        //  max-w-[1440px] ChatGPT ->  sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%]
+        className="relative py-4 mb-0 md:mb-4 lg:mb-6 xl:mb-8 max-w-full mx-auto 2xl:min-w-[1440px] min-w-[1200px] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] touch-pan-x overflow-x-auto overflow-y-clip focus:touch-pan-right"
       >
-        <div className="h-full w-auto flex flex-row items-start justify-between mt-4 lg:mt-6 xl:mt-8 text-black select-none cursor-grab">
+        <div className="h-full w-full flex flex-row items-start justify-between mt-4 lg:mt-6 xl:mt-8 text-black select-none cursor-grab">
           {testimonial.map((item, index) => {
             return (
               <div
                 key={index}
-                className="group min-w-[250px] sm:min-w-[350px] lg:min-w-[540px] h-auto flex flex-col justify-stretch my-4 md:my-6 lg:my-8 mx-4 py-6 md:py-8 lg:py-10 px-8 md:px-10 lg:px-12 text-left rounded-2xl bg-light-coral hover:bg-dark-coral transition-all ease-in-out delay-100"
+                className="group min-w-[25%] sm:min-w-[25%] lg:min-w-[40%] h-auto flex flex-col justify-stretch my-4 md:my-6 lg:my-8 mx-4 py-6 md:py-8 lg:py-10 px-8 md:px-10 lg:px-12 text-left rounded-2xl bg-light-coral hover:bg-dark-coral transition-all ease-in-out delay-100"
               >
                 <IconBxsQuoteAltLeft className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 mb-3 fill-[#d8e0e9] group-hover:fill-[#050505] delay-150" />
                 <p className="flex-1 regular-14 md:regular-16 italic group-hover:text-[#f5f5f5] first-letter:text-lg lg:first-letter:text-xl first-letter:uppercase">

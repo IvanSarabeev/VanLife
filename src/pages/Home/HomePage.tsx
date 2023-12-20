@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../components/HTML/Button";
+import Button from "components/HTML/Button";
 import { ReactComponent as IconStar } from "../../assets/svgs/star.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
 import HeroImg from "../../assets/images/hero.webp";
@@ -14,7 +14,7 @@ const HomePage = () => {
     <>
       <Layout>
         <main className="relative overflow-hidden font-inter text-custom-black bg-coral">
-          <section className="max-container px-6 flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+          <section className="max-container px-6 flex flex-col gap-20 py-10 pb-4 lg:pb-32 md:gap-28 lg:py-20 xl:flex-row">
             <img
               src={HeroImg}
               alt="hero"

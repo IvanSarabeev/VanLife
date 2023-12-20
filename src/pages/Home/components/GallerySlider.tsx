@@ -85,8 +85,8 @@ const GallerySlider = () => {
       </div>
       <aside className="flexEnd mt-10 px-6 lg:-mt-60 lg:mr-6">
         <div className="p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-16 xl:py-20 relative w-full overflow-hidden text-[#000000] rounded-3xl bg-dark-coral hover:bg-[#FFF7ED] hover:border-[#FF8C38] hover:border-[1px] hover:text-[#000000] transition-all ease-in-out duration-75 delay-75">
-          <h2 className="text:2xl md:text-3xl lg:text-4xl xl:text-[56px] xl:leading-[120%] xl:font-bold capitalize">
-            <strong className="font-black">Feeling Lost </strong>
+          <h2 className="text-3xl lg:text-4xl xl:text-[56px] xl:leading-[120%] xl:font-bold capitalize">
+            <strong className="font-black md:text-[#000000]">Feeling Lost </strong>
             and not knowing the way?
           </h2>
           <p className="regular-14 xl:regular-16 mt-5 indent-1">

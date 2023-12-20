@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "../HTML/Input";
-import Button from "../HTML/Button";
+import Input from "components/HTML/Input";
+import Button from "components/HTML/Button";
 
 const SubscribeBanner = () => {
   return (
