@@ -29,7 +29,7 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
       <div className="w-full gap-5 flex flex-col lg:flex-row items-start justify-center">
         <ImgCollection vanInfo={vanInfo} />
         <aside className="w-full sm:w-3/4 lg:max-w-sm gap-y-3 xl:gap-y-4 flex flex-col items-end justify-end regular-14 xl:regular-16">
-          <ScheduleForm />
+          <ScheduleForm vanInfo={vanInfo}/>
         </aside>
       </div>
       <article className="gap-6 w-full flex flex-col items-center justify-center lg:flex-row lg:items-start lg:justify-start regular-14">

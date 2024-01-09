@@ -116,7 +116,7 @@
   }
 
   .contact-input {
-    @apply w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg;
+    @apply w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] rounded-lg;
   }
 
   .phone-btn {

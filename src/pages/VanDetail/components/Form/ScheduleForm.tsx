@@ -5,8 +5,14 @@ import { BiSolidOffer } from "react-icons/bi";
 import { AiOutlineSchedule } from "react-icons/ai";
 import Calendar from "./Calendar";
 import { useToggle } from "hooks/useToggle";
+import { calculatePrice, calculateDays } from "utils/calculator";
+import { VanDataExtended } from "types/types";
 
-const ScheduleForm = () => {
+type VanProps = {
+  vanInfo: VanDataExtended;
+}
+
+const ScheduleForm = ({vanInfo}:VanProps) => {
 
   const [show, handleToggle] = useToggle();
   const [startDate, setStartDate] = useState<Date>(new Date());
@@ -21,9 +27,18 @@ const ScheduleForm = () => {
 
   useEffect(() => {
     if(startDate && endDate){
-      
+      const totalDays = calculateDays(startDate, endDate);
+      setCountDays(totalDays);
+
+      const totalPrice = calculatePrice(startDate, endDate, vanInfo.price);
+      setPrice(totalPrice);
+
+      localStorage.setItem("countDays", totalDays.toString());
+      localStorage.setItem("price", totalPrice.toString());
     }
-  },[])
+  },[startDate, endDate])
+
+  console.log(vanInfo);
 
   return (
     <>
@@ -35,16 +50,28 @@ const ScheduleForm = () => {
         <AiOutlineSchedule height={21} width={18} />
         Schedule an Trip
       </Button>
-      <Button
+      
+      {show ? (
+        <div className="w-full flex flex-col items-center justify-center border-one rounded-lg p-4 bg-slate-50">
+          <Calendar startDate={startDate} endDate={endDate} onChange={onChange}/> 
+          {countDays > 0 ? (
+            <div className="text-sm font-semibold mt-2.5">
+              <p className="text-center">Total of {countDays} days <br/>
+                Overall price: ${price}
+              </p>
+            </div>
+          ) : (
+            <p className="text-sm lg:text-base font-semibold mt-2.5">Unavailable</p>
+          )}
+        </div>
+        ) : null}
+        <Button
         type="button"
         className="h-16 w-full gap-4 flex items-center justify-center text-[#1A3760] font-semibold rounded-lg border-[1px] border-solid bg-[#F5C34B] hover:bg-[#E6AA1B] hover:border-[#252525]"
       >
         <BiSolidOffer height={21} width={18} />
         Save your Van
       </Button>
-      {show ? (
-        <Calendar startDate={startDate} endDate={endDate} onChange={onChange}/> 
-        ): null}
       <div className="w-full flex flex-col items-start justify-center p-5 border-one rounded-lg bg-white">
         <h4 className="regular-16 xl:regular-18 font-semibold text-[#1A3760] mb-5">
           Contact Us
