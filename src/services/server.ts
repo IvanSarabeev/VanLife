@@ -411,6 +411,17 @@ createServer({
     this.logging = false;
     this.timing = 1000;
 
+    this.post("/calculatePrice", (schema,request) => {
+      const {startDate, endDate, vanInfo} = JSON.parse(request.requestBody);
+
+      const dailyRate = 50;
+      const days: number = Math.ceil(
+        (new Date(endDate).getTime() - new Date(startDate).getTime()) / (1000 * 60 * 60 * 24)
+      );const calculatedPrice = days * dailyRate;
+
+      return { price: calculatedPrice };
+    });
+
     this.get("/vans", (schema) => {
       return schema.all("van");
     });

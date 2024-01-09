@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Input from "components/HTML/Input";
 import Button from "components/HTML/Button";
 import { BiSolidOffer } from "react-icons/bi";
@@ -9,13 +9,21 @@ import { useToggle } from "hooks/useToggle";
 const ScheduleForm = () => {
 
   const [show, handleToggle] = useToggle();
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(null);
+  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [endDate, setEndDate] = useState<null>(null);
   const onChange = (dates:any) => {
     const [start, end] = dates;
     setStartDate(start);
     setEndDate(end);
   };
+  const [countDays, setCountDays] = useState<number>(0);
+  const [price, setPrice] = useState<number>(0);
+
+  useEffect(() => {
+    if(startDate && endDate){
+      
+    }
+  },[])
 
   return (
     <>

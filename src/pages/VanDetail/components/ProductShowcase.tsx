@@ -22,8 +22,8 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
             {vanInfo.model}
           </h3>
         </div>
-        <h4 className="text-xl md:text-2xl font-semibold text-[#1a3760] text-right">
-          ${vanInfo.price} <strong className="text-gray-500/90">/day</strong>
+        <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#1a3760] text-right">
+          ${vanInfo.price} <strong className="text-gray-500/90 text-lg">/day</strong>
         </h4>
       </span>
       <div className="w-full gap-5 flex flex-col lg:flex-row items-start justify-center">
