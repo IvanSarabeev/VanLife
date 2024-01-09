@@ -33,7 +33,7 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
           alt={vanInfo.imgGallery[currentIndex].alt}
           loading="lazy"
           decoding="async"
-          className="group w-full h-full max-h-[700px] rounded-lg aspect-auto object-cover object-center transition-all ease-in-out scale-95 hover:scale-100"
+          className="group w-full h-full max-h-[700px] rounded-lg aspect-auto object-cover object-center transition-all ease-in-out scale-100"
         />
         <Button
           type="button"
@@ -47,18 +47,18 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
             className="prev-next-btns"
             onClick={() => switchImage(-1)}
           >
-            <FaArrowLeft height={13} width={16} color="currentColor" />
+            <FaArrowLeft height={13} width={16} color="#f3f3f3" />
           </Button>
           <Button
             type="button"
             className="prev-next-btns"
             onClick={() => switchImage(1)}
           >
-            <FaArrowRight height={13} width={16} color="currentColor" />
+            <FaArrowRight height={13} width={16} color="#f3f3f3" />
           </Button>
         </span>
       </motion.div>
-      <div className="w-full gap-2.5 px-2 lg:px-4 xl:px-6 2xl:px-8 flex flex-wrap items-center justify-center">
+      <div className="w-full gap-1 space-x-6 space-y-2 lg:space-x-0 lg:gap-2.5 xl:gap-4 px-2 lg:px-4 xl:px-6 2xl:px-8 flex flex-wrap items-center justify-center">
         {vanInfo.imgGallery.map((imgSrc, index) => {
           return (
             <motion.img
@@ -69,8 +69,8 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
               loading="lazy"
               onClick={() => setCurrentIndex(index)}
               className={`${
-                index === currentIndex ? "h-20 xl:h-24 w-fit opacity-100" : ""
-              } w-fit h-20 xl:h-24 2xl:w-40 rounded-md opacity-60 object-cover object-center aspect-square cursor-pointer hover:opacity-100`}
+                index === currentIndex ? "scale-105 border-2 lg:border-4 border-solid border-gray-500 mx-1 opacity-90 rounded-lg" : "rounded-md opacity-60"
+              } w-fit h-24 xl:h-24 2xl:w-40 object-cover object-center aspect-square cursor-pointer hover:scale-105 hover:opacity-90`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}

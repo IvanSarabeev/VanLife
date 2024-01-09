@@ -26,14 +26,14 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
           ${vanInfo.price} <strong className="text-gray-500/90">/day</strong>
         </h4>
       </span>
-      <div className="w-full gap-5 flex flex-col lg:flex-row items-center justify-center">
+      <div className="w-full gap-5 flex flex-col lg:flex-row items-start justify-center">
         <ImgCollection vanInfo={vanInfo} />
-        <aside className="w-full sm:w-3/4 lg:max-w-sm gap-y-2.5 xl:gap-y-3.5 flex flex-col items-end justify-end regular-14 xl:regular-16">
+        <aside className="w-full sm:w-3/4 lg:max-w-sm gap-y-3 xl:gap-y-4 flex flex-col items-end justify-end regular-14 xl:regular-16">
           <ScheduleForm />
         </aside>
       </div>
       <article className="gap-6 w-full flex flex-col items-center justify-center lg:flex-row lg:items-start lg:justify-start regular-14">
-        <div className="w-full lg:w-2/4 flex flex-col items-start justify-start border-one rounded-lg bg-slate-50 py-10 px-6">
+        <div className="w-full lg:w-2/4 flex flex-col items-start justify-start border-one rounded-lg bg-slate-50 p-6">
           <Overview vanInfo={vanInfo} />
         </div>
         <aside className="w-full gap-2 lg:w-2/4 flex flex-col items-start justify-start">

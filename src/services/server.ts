@@ -101,6 +101,12 @@ createServer({
           alt: "van",
           src: "https://images.prismic.io/indiecampers-demo/64608a77-9db1-49ff-bbd5-4889db6b4a72_20221012_152449.jpg?auto=compress,format&rect=0,999,3000,2001&w=2000&h=1334&q=30",
         },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://images.prismic.io/indiecampers-demo/091021a3-6905-4cec-a9f4-fa492b8e33b0_20221012_145159.jpg?auto=compress,format&rect=0,167,4000,2667&w=1200&h=800",
+        },
+        
       ],
     });
 
@@ -143,6 +149,11 @@ createServer({
           id: 4,
           alt: "van",
           src: "https://img.freepik.com/premium-photo/camping-beach_605905-13036.jpg",
+        },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
         },
       ],
     });
@@ -187,6 +198,11 @@ createServer({
           alt: "van",
           src: "https://img.freepik.com/free-photo/women-standing-near-campervan-front-view_23-2149516110.jpg?w=996&t=st=1699686064~exp=1699686664~hmac=4e14bde41002b84756eafffe380cae7da304b97ece1873de3a48d4cd63ddb0d5",
         },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
+        },
       ],
     });
 
@@ -229,6 +245,11 @@ createServer({
           id: 4,
           alt: "van",
           src: "https://images.prismic.io/indiecampers-demo/265d6158-c923-4672-90bb-1d56161abec9_Checkout_834387_sliding_door_open.jpg?auto=compress,format&rect=0,135,3264,2177&w=2000&h=1334&q=30",
+        },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://images.prismic.io/indiecampers-demo/aba40e74-c8fd-4dcc-8590-76098cdd2b6d_IndieCampersSSDSC07995.jpg?auto=compress,format&rect=0,0,4980,3320&w=1200&h=800",
         },
       ],
     });
@@ -273,6 +294,11 @@ createServer({
           alt: "van",
           src: "https://img.freepik.com/premium-photo/van-surrounded-by-lush-greenery-sounds-nature-created-with-generative-ai_124507-192892.jpg?w=996",
         },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
+        },
       ],
     });
 
@@ -316,6 +342,11 @@ createServer({
           alt: "van",
           src: "https://campervanbulgaria.com/wp-content/uploads/2019/06/rimor-ahorn-13-891x636.jpg",
         },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://img.freepik.com/free-photo/beautiful-campsite-mountains-with-rv-wooden-bench_181624-46208.jpg?w=996&t=st=1699630235~exp=1699630835~hmac=439f5eb3e58a4e2f61b27e4c67bed2e711eec004f57d8a4507a3392531bfed92",
+        },
       ],
     });
 
@@ -358,6 +389,11 @@ createServer({
           id: 4,
           alt: "van",
           src: "https://images.prismic.io/indiecampers-demo/5756bf07-9786-4c23-9b32-60dd6185866f_Screenshot+2022-03-03+at+09.46.05.png?auto=compress,format&rect=1,0,2012,1342&w=2000&h=1334&q=30",
+        },
+        {
+          id: 5,
+          alt: "van",
+          src: "https://images.prismic.io/indiecampers-demo/d777a652-2922-45a4-8008-5490d0a10903_Jeep_Camper001+(16).jpg?auto=compress,format&rect=0,53,1280,853&w=1200&h=800",
         },
       ],
     });

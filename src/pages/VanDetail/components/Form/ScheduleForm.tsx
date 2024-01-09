@@ -27,7 +27,7 @@ const ScheduleForm = () => {
         </h4>
         <form
           action="#"
-          className="gap-y-5 w-full flex flex-col items-start justify-center"
+          className="gap-y-4 md:gap-y-6 lg:gap-y-8 w-full flex flex-col items-start justify-center"
         >
           <Input
             type="text"
@@ -50,12 +50,14 @@ const ScheduleForm = () => {
             // value=""
             className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
           />
+          <div className="w-full gap-2 flex flex-col items-center justify-self-center">
           <Button className="w-full h-12 regular-14 font-semibold rounded-lg text-[#1A3760] bg-[#F5C34B] transition-all ease-in-out hover:text-white hover:bg-[#E6AA1B]">
             Send Message
           </Button>
           <Button className="w-full h-12 regular-14 font-semibold rounded-lg text-white bg-[#28A745] transition-all ease-in-out">
             + 359 981 731
           </Button>
+          </div>
         </form>
       </div>
     </>
