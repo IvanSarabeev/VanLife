@@ -39,7 +39,7 @@ export const headerLinks = [
   { title: "Vans", to: "/vans" },
   { title: "Host", to: "/host" },
   { title: "Log In", to: "/login" },
-];
+] as const;
 
 export const testimonial = [
   {

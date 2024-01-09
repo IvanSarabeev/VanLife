@@ -72,7 +72,7 @@
   }
 
   .primary-btn {
-    @apply w-full h-fit sm:w-fit flexCenter gap-3 py-5 px-8 mt-11 rounded-full border text-[#000000] text-base whitespace-nowrap bg-dark-coral transition-all ease-in-out hover:scale-105 focus:outline-2 focus:outline-yellow-50/95 hover:bg-[#000000] hover:text-[#ff8c38];
+    @apply w-full h-fit sm:w-fit flexCenter gap-3 py-5 px-8 rounded-full border text-[#000000] text-base whitespace-nowrap bg-dark-coral transition-all ease-in-out hover:scale-105 focus:outline-2 focus:outline-yellow-50/95 hover:bg-[#000000] hover:text-[#ff8c38];
   }
 
   .link-attr {
@@ -84,7 +84,7 @@
   }
 
   .remove-outline {
-    @apply border-none outline-none focus:ring-0;
+    @apply border-none outline-none focus:ring-0 h-fit mt-11;
   }
 
   .border-one {

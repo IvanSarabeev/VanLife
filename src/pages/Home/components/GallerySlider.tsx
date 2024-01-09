@@ -39,7 +39,7 @@ const GallerySlider = () => {
         onMouseDown={handleGrabStart}
         className="w-full h-80 lg:h-[400px] xl:h-[600px] flex items-start justify-start gap-8 text-white touch-pan-x overflow-x-auto cursor-grab focus:touch-pan-right"
       >
-        <div className="h-full w-full min-w-[450px] xl:min-w-[1000px] bg-van bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl aspect-auto object-cover">
+        <div className="h-full w-full min-w-[450px] xl:min-w-[1000px] bg-van bg-cover bg-no-repeat rounded-lg md:rounded-xl aspect-auto object-cover">
           <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
             <div className="flexCenter gap-4">
               <div className="rounded-full bg-dark-coral p-4 select-none">
@@ -54,7 +54,7 @@ const GallerySlider = () => {
             </div>
           </div>
         </div>
-        <div className="h-full w-full min-w-[450px] xl:min-w-[1000px] bg-capture bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl aspect-auto object-cover">
+        <div className="h-full w-full min-w-[450px] xl:min-w-[1000px] bg-capture bg-cover bg-no-repeat rounded-lg md:rounded-xl aspect-auto object-cover">
           <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
             <div className="flexCenter gap-4">
               <div className="rounded-full bg-dark-coral p-4 select-none">
@@ -69,7 +69,7 @@ const GallerySlider = () => {
             </div>
           </div>
         </div>
-        <div className="h-full w-full min-w-[450px] xl:min-w-[1000px] bg-home bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl aspect-auto object-cover">
+        <div className="h-full w-full min-w-[450px] xl:min-w-[1000px] bg-home bg-cover bg-no-repeat rounded-lg md:rounded-xl aspect-auto object-cover">
           <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
             <div className="flexCenter gap-4">
               <div className="rounded-full bg-dark-coral p-4 select-none">

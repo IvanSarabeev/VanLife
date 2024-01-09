@@ -1,8 +1,8 @@
 import React from "react";
+import Input from "components/HTML/Input";
 import Button from "components/HTML/Button";
 import { BiSolidOffer } from "react-icons/bi";
 import { AiOutlineSchedule } from "react-icons/ai";
-import Input from "components/HTML/Input";
 
 const ScheduleForm = () => {
   return (
