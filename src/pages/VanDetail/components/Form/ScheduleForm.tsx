@@ -1,12 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import Input from "components/HTML/Input";
 import Button from "components/HTML/Button";
 import { BiSolidOffer } from "react-icons/bi";
 import { AiOutlineSchedule } from "react-icons/ai";
+import Calendar from "./Calendar";
+import { useToggle } from "hooks/useToggle";
 
 const ScheduleForm = () => {
+
+  const [show, handleToggle] = useToggle();
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+  const onChange = (dates:any) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
   return (
     <>
+      <Button
+        type="button"
+        onClick={() => handleToggle()}
+        className="relative h-16 w-full gap-4 flex items-center justify-center text-white font-semibold rounded-lg border-[1px] border-solid bg-[#0A2357] hover:bg-[#1A3760] hover:border-[#252525]"
+      >
+        <AiOutlineSchedule height={21} width={18} />
+        Schedule an Trip
+      </Button>
       <Button
         type="button"
         className="h-16 w-full gap-4 flex items-center justify-center text-[#1A3760] font-semibold rounded-lg border-[1px] border-solid bg-[#F5C34B] hover:bg-[#E6AA1B] hover:border-[#252525]"
@@ -14,13 +34,9 @@ const ScheduleForm = () => {
         <BiSolidOffer height={21} width={18} />
         Save your Van
       </Button>
-      <Button
-        type="button"
-        className="h-16 w-full gap-4 flex items-center justify-center text-white font-semibold rounded-lg border-[1px] border-solid bg-[#0A2357] hover:bg-[#1A3760] hover:border-[#252525]"
-      >
-        <AiOutlineSchedule height={21} width={18} />
-        Schedule an Trip
-      </Button>
+      {show ? (
+        <Calendar startDate={startDate} endDate={endDate} onChange={onChange}/> 
+        ): null}
       <div className="w-full flex flex-col items-start justify-center p-5 border-one rounded-lg bg-white">
         <h4 className="regular-16 xl:regular-18 font-semibold text-[#1A3760] mb-5">
           Contact Us
@@ -34,27 +50,27 @@ const ScheduleForm = () => {
             placeholder="Name"
             required={true}
             // value=""
-            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+            className="contact-input"
           />
           <Input
             type="text"
             placeholder="Phone"
             required={true}
             // value=""
-            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+            className="contact-input"
           />
           <Input
             type="email"
             placeholder="Email"
             required={true}
             // value=""
-            className="w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg"
+            className="contact-input"
           />
           <div className="w-full gap-2 flex flex-col items-center justify-self-center">
-          <Button className="w-full h-12 regular-14 font-semibold rounded-lg text-[#1A3760] bg-[#F5C34B] transition-all ease-in-out hover:text-white hover:bg-[#E6AA1B]">
+          <Button className="message-btn regular-14">
             Send Message
           </Button>
-          <Button className="w-full h-12 regular-14 font-semibold rounded-lg text-white bg-[#28A745] transition-all ease-in-out">
+          <Button className="phone-btn regular-14">
             + 359 981 731
           </Button>
           </div>

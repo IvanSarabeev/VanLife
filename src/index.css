@@ -84,7 +84,7 @@
   }
 
   .remove-outline {
-    @apply border-none outline-none focus:ring-0 h-fit mt-11;
+    @apply border-none outline-none focus:ring-0 w-fit h-fit;
   }
 
   .border-one {
@@ -113,5 +113,17 @@
 
   .prev-next-btns {
     @apply w-12 h-12 flex items-center justify-center rounded-full bg-opacity-40 bg-[#0c1227] hover:bg-[#0A2357] hover:text-white transition-all ease-in-out;
+  }
+
+  .contact-input {
+    @apply w-full h-12 border-2 border-gray-500 pl-5 border-one text-[#5F6973] regular-14 rounded-lg;
+  }
+
+  .phone-btn {
+    @apply w-full h-12 font-semibold rounded-lg text-white bg-[#28A745] transition-all ease-in-out;
+  }
+
+  .message-btn {
+    @apply w-full h-12 font-semibold rounded-lg text-[#1A3760] bg-[#F5C34B] transition-all ease-in-out hover:text-white hover:bg-[#E6AA1B];
   }
 }
