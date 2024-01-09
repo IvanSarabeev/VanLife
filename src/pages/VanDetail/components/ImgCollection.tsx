@@ -33,7 +33,7 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
           alt={vanInfo.imgGallery[currentIndex].alt}
           loading="lazy"
           decoding="async"
-          className="group w-full h-full max-h-[700px] rounded-lg aspect-auto object-cover object-center transition-all ease-in-out scale-95 hover:scale-100 hover:rounded-xl"
+          className="group w-full h-full max-h-[700px] rounded-lg aspect-auto object-cover object-center transition-all ease-in-out scale-95 hover:scale-100"
         />
         <Button
           type="button"
@@ -47,14 +47,14 @@ const ImgCollection = ({ vanInfo }: ImgProps) => {
             className="prev-next-btns"
             onClick={() => switchImage(-1)}
           >
-            <FaArrowLeft height={13} width={16} color="#fff" />
+            <FaArrowLeft height={13} width={16} color="currentColor" />
           </Button>
           <Button
             type="button"
             className="prev-next-btns"
             onClick={() => switchImage(1)}
           >
-            <FaArrowRight height={13} width={16} color="#fff" />
+            <FaArrowRight height={13} width={16} color="currentColor" />
           </Button>
         </span>
       </motion.div>

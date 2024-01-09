@@ -33,16 +33,16 @@ const ProductShowcase = ({ vanInfo }: SingleVanProps) => {
         </aside>
       </div>
       <article className="gap-6 w-full flex flex-col items-center justify-center lg:flex-row lg:items-start lg:justify-start regular-14">
-        <div className="w-full lg:w-2/4 flex flex-col items-start justify-start border-one rounded-lg bg-white p-6">
+        <div className="w-full lg:w-2/4 flex flex-col items-start justify-start border-one rounded-lg bg-slate-50 py-10 px-6">
           <Overview vanInfo={vanInfo} />
         </div>
         <aside className="w-full gap-2 lg:w-2/4 flex flex-col items-start justify-start">
-          <div className="border-one rounded-lg p-6 bg-white">
+          <div className="border-one rounded-lg p-6 bg-slate-50">
             <Description vanInfo={vanInfo} />
           </div>
-          {/* <div className="border-one rounded-lg p-6 bg-white">
+          <div className="w-full border-one rounded-lg p-6 bg-slate-50">
             <Location />
-          </div> */}
+          </div>
         </aside>
       </article>
     </div>

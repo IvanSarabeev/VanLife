@@ -5,7 +5,6 @@ import { VanDataExtended } from "types/types";
 import Layout from "components/Layouts/Layout";
 import Button from "components/HTML/Button";
 import Loader from "components/Loader/Loader";
-// import ProductDetail from "./Detail/ProductDetail";
 import { ReactComponent as IconLeft } from "../../assets/svgs/arrow-left.svg";
 import ProductShowcase from "./components/ProductShowcase";
 

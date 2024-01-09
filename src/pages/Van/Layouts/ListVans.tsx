@@ -13,12 +13,14 @@ type ListVansProps = {
 const ListVans = ({ item }: ListVansProps) => {
   return (
     <Link to={item.id}>
-      <div className="group w-full h-auto gap-y-0 md:gap-y-6 flex flex-col md:flex-row items-center justify-start rounded-xl border-one bg-[#f9f9f9]">
+      <div className="group w-full h-auto gap-y-0 md:gap-y-6 flex flex-col md:flex-row items-center justify-start rounded-xl border-one bg-slate-50">
         <div className="relative p-2 md:p-3 lg:p-3.5 xl:p-4 2xl:p-6">
           <img
             src={item.imageUrl}
             alt={item.name}
-            className="w-96 h-[290px] sm:w-full sm:h-[360px] md:w-fit md:max-w-[360px] md:h-fit md:max-h-[360px] xl:w-11/12 xl:h-full rounded-md aspect-auto object-cover object-center mx-auto"
+            decoding="async"
+            loading="lazy"
+            className="w-96 h-72 sm:w-full sm:h-[360px] md:w-fit md:max-w-[360px] md:h-fit md:max-h-[360px] xl:w-11/12 xl:h-full rounded-md aspect-auto object-cover object-center mx-auto"
           />
         </div>
         <div className="w-full md:gap-4 lg:gap-2 flex flex-col items-start justify-between md:justify-center p-4">

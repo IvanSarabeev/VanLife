@@ -12,13 +12,15 @@ type GridVansProps = {
 
 const GridVans = ({ item }: GridVansProps) => {
   return (
-    <div className="group h-auto mb-6 p rounded-xl border-one bg-[#f9f9f9]">
+    <div className="group h-auto mb-6 p rounded-xl border-one bg-slate-50">
       <Link to={item.id}>
         <div className="p-2">
           <img
             src={item.imageUrl}
             alt={item.name}
-            className="w-96 h-[290px] sm:w-full sm:h-56 rounded-md aspect-auto object-cover mx-auto"
+            decoding="async"
+            loading="lazy"
+            className="w-96 h-72 sm:w-full sm:h-56 rounded-md aspect-auto object-cover mx-auto"
           />
         </div>
         <div className="flex flex-col items-start justify-center py-4 px-2">

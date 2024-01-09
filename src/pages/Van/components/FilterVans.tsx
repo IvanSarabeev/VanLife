@@ -40,7 +40,7 @@ const FilterVans = ({
           name="select"
           value={sortOption}
           onChange={handleSortSelect}
-          className="w-56 h-10 relative text-[#5F6973] regular-14 pl-4 border-one bg-white cursor-pointer"
+          className="w-56 h-10 relative text-[#5F6973] regular-14 pl-4 rounded-lg border-one bg-white cursor-pointer"
         >
           {selectOptions.map((item, index) => {
             return (
