@@ -65,7 +65,7 @@ const AboutPage = () => {
               <p className="regular-18 text-[#FF8C38] -mt-1 mb-3 uppercase">
                 We are here for you
               </p>
-              <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
+              <div className="flex flex-wrap items-center justify-between gap-5 lg:gap-10">
                 <h3 className="text-[40px] lg:text-[64px] heading-attr xl:max-w-[640px]">
                   We Guide You throught Everything
                 </h3>
@@ -159,7 +159,7 @@ const AboutPage = () => {
               </Link> */}
             </div>
           </section>
-          <section className="gap-6 flex flex-col items-center justify-center py-10 max-container padding-container">
+          <section className="gap-6 flex flex-col md:flex-row items-center justify-center py-10 max-container">
             <Community />
           </section>
           <section className="gap-6 flex flex-col items-center justify-center py-10 max-container padding-container">

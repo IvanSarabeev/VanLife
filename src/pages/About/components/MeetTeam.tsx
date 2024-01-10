@@ -5,14 +5,13 @@ const MeetTeam = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center pb-6">
-        {/* <p className="regular-16 text-[#FF8C38] -mb-1 uppercase">our team</p> */}
-        <h4 className="text-[24px] lg:text-[40px] heading-attr capitalize">
+        <h4 className="text-[40px] lg:text-[48px] heading-attr xl:max-w-[640px]">
           Meet our excellent team
         </h4>
-        <p className="max-w-md regular-14 lg:regular-16 text-gray-600 mt-2">
+        {/* <p className="max-w-md regular-14 lg:regular-16 text-gray-600 mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, alias ut
           deserunt modi dolorum magnam. Saepe doloremque magnam.
-        </p>
+        </p> */}
       </div>
       <div className="gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 flex flex-wrap flex-col sm:flex-row items-center justify-center 2xl:flex-nowrap">
         {vanStaff.map((item, index) => {
