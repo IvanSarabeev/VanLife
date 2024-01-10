@@ -45,8 +45,8 @@ const Features = () => {
               );
             })}
           </ul>
-          <Link to="about" className="remove-outline w-fit">
-            <Button type="button" className="primary-btn mt-0">
+          <Link to="about" className="remove-outline mt-2 md:mt-0">
+            <Button type="button" className="primary-btn">
               Who are we &rarr;
             </Button>
           </Link>

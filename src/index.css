@@ -68,11 +68,11 @@
   }
 
   .mockup-img {
-    @apply h-[815px] w-[428px] hidden lg:flex absolute top-[13%] z-10 max-w-[1500px] rotate-12 md:left-[-4rem] aspect-auto object-cover;
+    @apply h-[815px] w-[428px] hidden lg:flex absolute top-[13%] z-10 max-w-[1500px] pb-4 rotate-12 md:left-[-4rem] aspect-auto object-cover;
   }
 
   .primary-btn {
-    @apply w-full h-fit sm:w-fit flexCenter gap-3 py-5 px-8 rounded-full border text-[#000000] text-base whitespace-nowrap bg-dark-coral transition-all ease-in-out hover:scale-105 focus:outline-2 focus:outline-yellow-50/95 hover:bg-[#000000] hover:text-[#ff8c38];
+    @apply w-full h-fit sm:w-fit flexCenter gap-3 py-5 px-8 rounded-full border text-[#070707] text-base font-medium whitespace-nowrap bg-dark-coral transition-all ease-in-out hover:scale-105 focus:outline-2 focus:outline-yellow-50/95 hover:bg-[#000000] hover:text-[#ff8c38];
   }
 
   .link-attr {
@@ -80,7 +80,7 @@
   }
 
   .gray-subheading {
-    @apply regular-16 text-gray-200/95 group-hover:text-gray-800/90;
+    @apply font-semibold regular-16 text-gray-400/95 group-hover:text-white;
   }
 
   .remove-outline {

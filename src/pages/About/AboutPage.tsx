@@ -11,6 +11,7 @@ import { partnersLists, showcaseTrip } from "../../constants/data";
 import ProviderBenefits from "./components/Benefits";
 import MeetTeam from "./components/MeetTeam";
 import SubscribeBanner from "components/Banner/SubscribeBanner";
+import Community from "./components/Community";
 
 const AboutPage = () => {
   return (
@@ -143,7 +144,7 @@ const AboutPage = () => {
                         <IconCheck
                           width={24}
                           height={24}
-                          className="group-hover:fill-[#87d195] text-black transition-all ease-in duration-100 "
+                          className="group-hover:fill-[#FF8C38] text-black transition-all ease-in duration-100 "
                         />
                         {label.text}
                       </li>
@@ -151,12 +152,15 @@ const AboutPage = () => {
                   })}
                 </ul>
               </div>
-              <Link to="/vans" className="w-full remove-outline">
+              {/* <Link to="/vans" className="w-full remove-outline mt-2 ">
                 <Button type="button" className="primary-btn">
-                  Chose van &rarr;
+                  Continue &rarr;
                 </Button>
-              </Link>
+              </Link> */}
             </div>
+          </section>
+          <section className="gap-6 flex flex-col items-center justify-center py-10 max-container padding-container">
+            <Community />
           </section>
           <section className="gap-6 flex flex-col items-center justify-center py-10 max-container padding-container">
             <MeetTeam />

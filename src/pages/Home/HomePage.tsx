@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Button from "components/HTML/Button";
+import Button from "components/HTML/Button";
 import { ReactComponent as IconStar } from "../../assets/svgs/star.svg";
 import { ReactComponent as IconMapPin } from "../../assets/svgs/map-pin.svg";
 import HeroImg from "../../assets/images/hero.webp";
@@ -20,7 +20,7 @@ const HomePage = () => {
               alt="hero"
               decoding="async"
               loading="eager"
-              className="absolute top-0 right-0 md:right-[-7rem] h-screen w-screen bg-cover bg-center object-cover aspect-auto"
+              className="absolute top-0 lg:top-10 2xl:-top-20 right-0 md:right-[-7rem] h-screen w-screen bg-cover bg-center object-cover aspect-auto"
             />
             <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
               <h1 className="text-[52px] lg:text-[68px] heading-attr">
@@ -49,9 +49,9 @@ const HomePage = () => {
                 </p>
               </div>
               <Link to="vans" className="remove-outline">
-                {/* <Button type="button" className="primary-btn">
+                <Button type="button" className="primary-btn">
                   Find Your Van &rarr;
-                </Button> */}
+                </Button>
               </Link>
             </div>
             <aside className="relative flex flex-1 items-start">

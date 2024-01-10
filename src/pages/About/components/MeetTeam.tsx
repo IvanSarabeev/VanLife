@@ -5,7 +5,7 @@ const MeetTeam = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center pb-6">
-        <p className="regular-16 text-[#FF8C38] -mb-1 uppercase">our team</p>
+        {/* <p className="regular-16 text-[#FF8C38] -mb-1 uppercase">our team</p> */}
         <h4 className="text-[24px] lg:text-[40px] heading-attr capitalize">
           Meet our excellent team
         </h4>

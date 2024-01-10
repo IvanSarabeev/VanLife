@@ -24,7 +24,7 @@ const Provider = ({ item, Icon }: ProviderProps) => {
     <>
       <div className="w-full h-fit flex flex-col items-start justify-center text-left px-5 py-6 mx-2 rounded-xl border-transparent transition-all ease-in-out duration-150 delay-100">
         <div
-          className={`flex items-center gap-2 rounded-tr-[24px] rounded-tl-[32px] rounded-br-[32px] rounded-bl-[25px] p-4 transition-all ease-in delay-150 border-[1px] border-transparent`}
+          className="flex items-center gap-2 rounded-tr-[24px] rounded-tl-[32px] rounded-br-[32px] rounded-bl-[25px] p-4 transition-all ease-in delay-150 border-[1px] border-transparent"
         >
           <Icon
             className={`w-8 h-8 ${item.iconFill} group-hover:animate-pulse`}

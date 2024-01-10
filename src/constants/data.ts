@@ -5,6 +5,9 @@ import { ReactComponent as IconChartLine } from "../assets/svgs/chart-line.svg";
 import { ReactComponent as IconUsers } from "../assets/svgs/users.svg";
 import { ReactComponent as IconSparkles } from "../assets/svgs/sparkles.svg";
 import { ReactComponent as IconCreditCard } from "../assets/svgs/credit-card.svg";
+import {ReactComponent as IconFacebook} from "../assets/svgs/facebook.svg";
+import {ReactComponent as IconTwitter} from "../assets/svgs/twitter.svg";
+import {ReactComponent as IconGitHub} from "../assets/svgs/github.svg";
 
 export const featuresData = [
   {
@@ -142,3 +145,9 @@ export const selectOptions = [
   { value: "Price: Lowest Cost" },
   { value: "Price: Highest Cost" },
 ];
+
+export const socialLinks = [
+  {title:"Facebook", href:"https://www.facebook.com/ivan.sarabeev/",icon:IconFacebook},
+  {title:"Twitter", href:"https://twitter.com/IvanSarabeev12",icon:IconTwitter},
+  {title:"GitHub", href:"https://github.com/IvanSarabeev",icon:IconGitHub},
+] as const;
